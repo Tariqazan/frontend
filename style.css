@@ -424,11 +424,10 @@ body .bui_font_strong {
     overflow-x: hidden;
 }
 
-@media (max-width:'600px') {
+@media (max-width: 600px) {
     .second-nav {
-        overflow-x: scroll;
+        overflow-x: scroll !important;
     }
-
 }
 
 .category-btn {
