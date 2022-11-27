@@ -315,16 +315,6 @@
     right: 0;
 }
 
-@media (max-width:600px) {
-    .navigation {
-        background-color: var(--bui_color_brand_primary_background_dynamic) !important;
-    }
-
-    .bg-overlay {
-        background: none;
-    }
-}
-
 
 .bg-video {
     top: 0;
@@ -382,9 +372,11 @@
 
 .modal-btn {
     color: white !important;
-    font-weight: 600;
-    font-size: 14px;
-    cursor: pointer;
+    font-weight: 600 !important;
+    font-size: 14px !important;
+    cursor: pointer !important;
+    background-color: transparent;
+    border: none;
 }
 
 .modal__title {
@@ -499,7 +491,6 @@ body .bui_font_strong {
     font-size: var(--DO_NOT_USE_bui_small_font_featured_2_font-size);
     font-weight: var(--DO_NOT_USE_bui_small_font_featured_2_font-weight);
     line-height: var(--DO_NOT_USE_bui_small_font_featured_2_line-height);
-    text-align: center;
 }
 
 
@@ -513,7 +504,6 @@ body .bui_font_strong {
 }
 
 .tagline {
-    text-align: center;
     font-family: Avenir Next, BlinkMacSystemFont, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif;
     color: white;
     font-family: var(--DO_NOT_USE_bui_small_font_display_3_font-family);
@@ -544,7 +534,6 @@ body .bui_font_strong {
 }
 
 .offer-limit {
-    text-align: center;
     font-family: Avenir Next, BlinkMacSystemFont, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif;
     margin-bottom: 0;
     margin-top: var(--bui_spacing_1x);
@@ -742,4 +731,30 @@ form.sign-up {
     display: flex;
     align-items: center;
     justify-content: center;
+}
+
+.nav-responsive-btn {
+    display: none !important;
+}
+
+@media (max-width:600px) {
+    .navigation {
+        background-color: var(--bui_color_brand_primary_background_dynamic) !important;
+    }
+
+    .nav-responsive-btn {
+        display: block !important;
+    }
+
+    .navbar-collapse {
+        background-color: white !important;
+    }
+
+    .nav-link {
+        color: black !important;
+    }
+
+    .bg-overlay {
+        background: none;
+    }
 }
