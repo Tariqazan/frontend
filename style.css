@@ -298,7 +298,6 @@
     --DO_NOT_USE_bui_large_font_emphasized_2_font-family: BlinkMacSystemFont, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif;
 }
 
-
 .navigation {
     background-color: transparent !important;
     padding: 15px 0;
@@ -582,18 +581,14 @@ footer .footer {
 
 .offer {
     width: 100%;
-    display: flex;
-    box-sizing: border-box;
     margin-bottom: 40px;
 }
 
 .offer-box {
     border: 1px solid #EDF2F7;
-    display: flex;
     background: #ffffff;
     box-shadow: 0px 8px 8px rgb(0 0 0 / 3%);
     border-radius: 16px;
-    justify-content: space-between;
     margin: 0 auto;
 }
 
@@ -621,7 +616,7 @@ footer .footer {
 }
 
 form.sign-up {
-    margin: 31px 31px 31px 58px;
+    margin: 30px 20px;
     display: flex;
     align-items: center;
 }
@@ -645,10 +640,10 @@ form.sign-up {
 .input-number input {
     font: inherit;
     color: currentColor;
-    width: 100%;
+    width: 120px;
     border: 0;
     height: 1.1876em;
-    margin: 0;
+    margin: 0 40px 0 0;
     display: block;
     padding: 6px 0 7px;
     min-width: 0;
