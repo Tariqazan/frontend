@@ -1,0 +1,926 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=0">
+    <title>demo</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="static/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
+        integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+<body>
+    <div class="container">
+        <nav class="navbar navbar-expand-lg">
+            <a class="navbar-brand" href="#">
+                <svg class="bk-icon -streamline-booking_logo_dark_bg_mono" height="24" width="144" viewBox="0 0 180 30"
+                    role="presentation" aria-hidden="true" focusable="false">
+                    <path fill="#fff"
+                        d="M70.6 2.73999C70.602 2.19808 70.7646 1.66892 71.0673 1.21943C71.3701 0.769947 71.7993 0.420321 72.3007 0.214768C72.8021 0.00921437 73.3532 -0.0430342 73.8843 0.064629C74.4155 0.172292 74.9027 0.435032 75.2845 0.819622C75.6663 1.20421 75.9255 1.69338 76.0293 2.22527C76.133 2.75716 76.0768 3.30788 75.8676 3.80779C75.6584 4.3077 75.3056 4.73434 74.8539 5.03377C74.4022 5.3332 73.8719 5.49197 73.33 5.48999C72.9702 5.48868 72.6141 5.41651 72.2822 5.2776C71.9503 5.13869 71.649 4.93576 71.3955 4.6804C71.1419 4.42504 70.9412 4.12225 70.8047 3.78931C70.6683 3.45637 70.5987 3.09982 70.6 2.73999V2.73999ZM116.5 23.77C117.044 23.772 117.577 23.6124 118.031 23.3114C118.484 23.0104 118.838 22.5816 119.048 22.0793C119.257 21.577 119.313 21.0238 119.208 20.4897C119.103 19.9555 118.842 19.4646 118.458 19.079C118.074 18.6934 117.584 18.4305 117.05 18.3236C116.516 18.2167 115.963 18.2705 115.46 18.4784C114.957 18.6862 114.527 19.0387 114.224 19.4911C113.922 19.9436 113.76 20.4757 113.76 21.02C113.76 21.7476 114.048 22.4456 114.562 22.961C115.075 23.4764 115.772 23.7673 116.5 23.77V23.77ZM25.7 6.72999C24.0129 6.74775 22.3688 7.26426 20.9746 8.21447C19.5805 9.16469 18.4986 10.5061 17.8653 12.0699C17.2319 13.6337 17.0754 15.3499 17.4154 17.0025C17.7554 18.6551 18.5767 20.1701 19.776 21.3569C20.9752 22.5436 22.4988 23.349 24.1548 23.6717C25.8108 23.9944 27.5253 23.8199 29.0824 23.1702C30.6395 22.5205 31.9695 21.4247 32.9051 20.0206C33.8406 18.6166 34.3399 16.9672 34.34 15.28C34.3768 14.1396 34.1778 13.0038 33.7555 11.9438C33.3331 10.8839 32.6965 9.92248 31.8855 9.11989C31.0744 8.3173 30.1064 7.69078 29.0421 7.27955C27.9778 6.86831 26.84 6.68122 25.7 6.72999V6.72999ZM25.7 19.83C23.35 19.83 21.7 17.96 21.7 15.28C21.7 12.6 23.34 10.73 25.7 10.73C28.06 10.73 29.7 12.6 29.7 15.28C29.7 17.96 28.11 19.83 25.7 19.83ZM65.3 15.71C65.1321 15.3716 64.9128 15.0613 64.65 14.79L64.5 14.63L64.66 14.48C64.9116 14.2078 65.1423 13.917 65.35 13.61L69.74 7.05999H64.41L61.1 12.19C60.9586 12.3442 60.782 12.4621 60.5852 12.5334C60.3885 12.6048 60.1774 12.6277 59.97 12.6H59.22V2.90999C59.22 0.979993 58.01 0.709993 56.71 0.709993H54.48V23.58H59.21V16.72H59.65C60.19 16.72 60.56 16.78 60.73 17.08L63.35 21.97C63.5773 22.5089 63.9785 22.9563 64.4895 23.2408C65.0006 23.5253 65.5922 23.6306 66.17 23.54H69.8L67.09 19.07L65.3 15.71ZM88.27 6.68999C87.3747 6.67014 86.4851 6.83782 85.6584 7.18226C84.8318 7.5267 84.0863 8.04028 83.47 8.68999L83.18 8.97999L83.08 8.57999C82.9261 8.08803 82.6021 7.66692 82.166 7.39207C81.7299 7.11723 81.2102 7.0066 80.7 7.07999H78.57V23.57H83.29V15.97C83.275 15.2919 83.373 14.6159 83.58 13.97C83.7979 13.1302 84.2923 12.3883 84.9836 11.8639C85.6748 11.3396 86.5225 11.0634 87.39 11.08C88.85 11.08 89.39 11.85 89.39 13.86V21.05C89.335 21.3921 89.3619 21.7424 89.4686 22.072C89.5753 22.4017 89.7586 22.7013 90.0036 22.9463C90.2487 23.1914 90.5483 23.3747 90.878 23.4814C91.2076 23.5881 91.5579 23.615 91.9 23.56H94.12V13.07C94.15 8.89999 92.12 6.68999 88.27 6.68999V6.68999ZM73.39 7.05999H71.17V23.58H75.87V9.57999C75.9234 9.24041 75.8964 8.89304 75.7913 8.56576C75.6862 8.23848 75.5058 7.94038 75.2647 7.69537C75.0236 7.45037 74.7284 7.26527 74.4028 7.15493C74.0773 7.04459 73.7304 7.01208 73.39 7.05999V7.05999ZM44.16 6.72999C42.4729 6.74775 40.8288 7.26426 39.4346 8.21447C38.0405 9.16469 36.9586 10.5061 36.3253 12.0699C35.6919 13.6337 35.5354 15.3499 35.8754 17.0025C36.2154 18.6551 37.0367 20.1701 38.236 21.3569C39.4352 22.5436 40.9588 23.349 42.6148 23.6717C44.2708 23.9944 45.9853 23.8199 47.5424 23.1702C49.0995 22.5205 50.4295 21.4247 51.3651 20.0206C52.3006 18.6166 52.7999 16.9672 52.8 15.28C52.8368 14.1396 52.6378 13.0038 52.2155 11.9438C51.7931 10.8839 51.1565 9.92248 50.3455 9.11989C49.5344 8.3173 48.5664 7.69078 47.5021 7.27955C46.4378 6.86831 45.3 6.68122 44.16 6.72999V6.72999ZM44.16 19.83C41.81 19.83 40.16 17.96 40.16 15.28C40.16 12.6 41.8 10.73 44.16 10.73C46.52 10.73 48.16 12.6 48.16 15.28C48.16 17.96 46.57 19.83 44.16 19.83ZM144.89 6.72999C143.203 6.74775 141.559 7.26426 140.165 8.21447C138.77 9.16469 137.689 10.5061 137.055 12.0699C136.422 13.6337 136.265 15.3499 136.605 17.0025C136.945 18.6551 137.767 20.1701 138.966 21.3569C140.165 22.5436 141.689 23.349 143.345 23.6717C145.001 23.9944 146.715 23.8199 148.272 23.1702C149.829 22.5205 151.16 21.4247 152.095 20.0206C153.031 18.6166 153.53 16.9672 153.53 15.28C153.567 14.1396 153.368 13.0038 152.945 11.9438C152.523 10.8839 151.887 9.92248 151.075 9.11989C150.264 8.3173 149.296 7.69078 148.232 7.27955C147.168 6.86831 146.03 6.68122 144.89 6.72999V6.72999ZM144.89 19.83C142.54 19.83 140.89 17.96 140.89 15.28C140.89 12.6 142.53 10.73 144.89 10.73C147.25 10.73 148.89 12.6 148.89 15.28C148.89 17.96 147.3 19.83 144.89 19.83ZM109.74 7.01999C109.356 6.98285 108.97 7.05749 108.627 7.23491C108.285 7.41233 108.001 7.68497 107.81 8.01999L107.69 8.26999L107.47 8.07999C106.253 7.08344 104.711 6.57072 103.14 6.63999C98.75 6.63999 95.78 9.94999 95.78 14.87C95.78 19.79 98.85 23.22 103.23 23.22C104.521 23.2791 105.795 22.9061 106.85 22.16L107.21 21.88V22.34C107.21 24.55 105.78 25.77 103.21 25.77C102.131 25.755 101.062 25.5555 100.05 25.18C99.8562 25.0813 99.6419 25.0295 99.4244 25.0287C99.2069 25.0279 98.9923 25.0782 98.7977 25.1754C98.6032 25.2727 98.4342 25.4143 98.3043 25.5887C98.1745 25.7632 98.0874 25.9657 98.05 26.18L97.14 28.46L97.47 28.63C99.2593 29.5195 101.232 29.9783 103.23 29.97C107.23 29.97 111.9 27.91 111.9 22.14V7.01999H109.74ZM104.06 19.11C101.5 19.11 100.58 16.86 100.58 14.76C100.58 13.83 100.81 10.76 103.81 10.76C105.3 10.76 107.3 11.18 107.3 14.86C107.3 18.38 105.54 19.11 104.06 19.11ZM13.09 11.85L12.4 11.47L13 10.97C13.6103 10.4334 14.0951 9.76919 14.42 9.02435C14.7449 8.27951 14.9019 7.47231 14.88 6.65999C14.88 3.05999 12.09 0.739993 7.79 0.739993H2.31C1.69606 0.762953 1.11431 1.02048 0.684566 1.45953C0.254821 1.89857 0.00981021 2.48571 0 3.09999L0 23.5H7.88C12.67 23.5 15.77 20.89 15.77 16.84C15.8104 15.8446 15.583 14.8566 15.1116 13.9789C14.6403 13.1012 13.9421 12.3661 13.09 11.85V11.85ZM4.37 6.07999C4.37 5.01999 4.82 4.51999 5.8 4.45999H7.8C8.16093 4.42761 8.52456 4.47504 8.8651 4.59892C9.20565 4.7228 9.51476 4.9201 9.77052 5.17681C10.0263 5.43353 10.2224 5.74338 10.345 6.08438C10.4676 6.42538 10.5137 6.78919 10.48 7.14999C10.5194 7.51629 10.4791 7.88679 10.3616 8.23598C10.2442 8.58517 10.0524 8.90477 9.79964 9.17277C9.54684 9.44077 9.23898 9.65082 8.89723 9.78844C8.55549 9.92606 8.18798 9.988 7.82 9.96999H4.37V6.07999ZM8.2 19.64H4.37V15.06C4.37 14.06 4.76 13.57 5.59 13.45H8.2C8.99043 13.4949 9.7337 13.8406 10.2774 14.4161C10.8211 14.9916 11.124 15.7533 11.124 16.545C11.124 17.3367 10.8211 18.0984 10.2774 18.6739C9.7337 19.2494 8.99043 19.595 8.2 19.64ZM174.53 6.73999C173.558 6.74366 172.6 6.96575 171.726 7.38984C170.852 7.81393 170.084 8.42915 169.48 9.18999L169.14 9.62999L168.87 9.13999C168.437 8.355 167.787 7.71128 166.998 7.2857C166.209 6.86012 165.314 6.67067 164.42 6.73999C163.604 6.75328 162.798 6.93308 162.054 7.26838C161.309 7.60368 160.641 8.08742 160.09 8.68999L159.65 9.16999L159.48 8.53999C159.323 8.07152 159.008 7.67282 158.587 7.41334C158.167 7.15386 157.669 7.05005 157.18 7.11999H155.18V23.57H159.64V16.31C159.646 15.6629 159.727 15.0187 159.88 14.39C160.31 12.63 161.49 10.74 163.47 10.93C164.69 11.05 165.29 11.99 165.29 13.82V23.57H169.81V16.31C169.791 15.6345 169.875 14.9601 170.06 14.31C170.42 12.64 171.65 10.92 173.56 10.92C174.94 10.92 175.45 11.7 175.45 13.81V21.17C175.45 22.83 176.19 23.57 177.85 23.57H180V13.07C180 8.86999 178.15 6.73999 174.53 6.73999ZM133.69 17.86C132.51 19.095 130.913 19.8471 129.21 19.97C128.593 20.0073 127.974 19.914 127.395 19.6962C126.816 19.4784 126.29 19.141 125.85 18.706C125.41 18.271 125.067 17.7482 124.843 17.1716C124.619 16.5951 124.519 15.9778 124.55 15.36C124.498 14.7504 124.575 14.1365 124.776 13.5588C124.978 12.981 125.299 12.4524 125.719 12.0076C126.14 11.5629 126.649 11.212 127.215 10.978C127.78 10.744 128.388 10.6322 129 10.65C129.84 10.65 130.8 10.95 130.95 11.46V11.55C131.048 11.8986 131.258 12.2056 131.547 12.424C131.835 12.6425 132.188 12.7605 132.55 12.76H135V10.61C135 7.76999 131.39 6.73999 129 6.73999C123.81 6.73999 120 10.37 120 15.35C120 20.33 123.73 23.97 128.86 23.97C130.178 23.9562 131.479 23.6722 132.683 23.1355C133.887 22.5989 134.969 21.821 135.86 20.85L134 17.58L133.69 17.86Z">
+                    </path>
+                </svg>
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                    <li class="nav-item nav-btn">
+                        <a class="nav-link modal-btn" data-bs-toggle="modal" data-bs-target="#currency">BDT</a>
+                        <!-- Modal -->
+                        <div class="modal fade" id="currency" tabindex="-1" aria-labelledby="exampleModalLabel"
+                            aria-hidden="true">
+                            <div class="modal-dialog">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <h2 class="modal__title">
+                                            Select your currency
+                                        </h2>
+                                        <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                            aria-label="Close"></button>
+                                    </div>
+                                    <div class="modal-body">
+                                        <h3 class="bui-f-font-strong">
+                                            Suggested for you
+                                        </h3>
+                                        <div class="row">
+                                            <div class="col-md-3">
+                                                <a class="bui-list-item bui-list-item--size-small "
+                                                    data-et-click="customGoal:YTTHbXeeVJWcWPaDMWOMHTcNSDEWCAWdPZKe:2"
+                                                    data-modal-header-async-url-param="changed_currency=1&amp;selected_currency=USD&amp;top_currency=1"
+                                                    href="#">
+                                                    <div class="bui-inline-container">
+                                                        <div class="bui-inline-container__main">
+                                                            U.S. Dollar
+                                                            <div class="bui-traveller-header__currency">
+                                                                USD
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </a>
+                                            </div>
+                                            <div class="col-md-3">
+                                                <a class="bui-list-item bui-list-item--size-small "
+                                                    data-et-click="customGoal:YTTHbXeeVJWcWPaDMWOMHTcNSDEWCAWdPZKe:2"
+                                                    data-modal-header-async-url-param="changed_currency=1&amp;selected_currency=USD&amp;top_currency=1"
+                                                    href="#">
+                                                    <div class="bui-inline-container">
+                                                        <div class="bui-inline-container__main">
+                                                            Euro
+                                                            <div class="bui-traveller-header__currency">
+                                                                EUR
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </a>
+                                            </div>
+                                            <div class="col-md-3">
+                                                <a class="bui-list-item bui-list-item--size-small "
+                                                    data-et-click="customGoal:YTTHbXeeVJWcWPaDMWOMHTcNSDEWCAWdPZKe:2"
+                                                    data-modal-header-async-url-param="changed_currency=1&amp;selected_currency=USD&amp;top_currency=1"
+                                                    href="#">
+                                                    <div class="bui-inline-container">
+                                                        <div class="bui-inline-container__main">
+                                                            Euro
+                                                            <div class="bui-traveller-header__currency">
+                                                                EUR
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </a>
+                                            </div>
+                                            <div class="col-md-3">
+                                                <a class="bui-list-item bui-list-item--size-small "
+                                                    data-et-click="customGoal:YTTHbXeeVJWcWPaDMWOMHTcNSDEWCAWdPZKe:2"
+                                                    data-modal-header-async-url-param="changed_currency=1&amp;selected_currency=USD&amp;top_currency=1"
+                                                    href="#">
+                                                    <div class="bui-inline-container">
+                                                        <div class="bui-inline-container__main">
+                                                            Euro
+                                                            <div class="bui-traveller-header__currency">
+                                                                EUR
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </a>
+                                            </div>
+                                            <div class="col-md-3">
+                                                <a class="bui-list-item bui-list-item--size-small "
+                                                    data-et-click="customGoal:YTTHbXeeVJWcWPaDMWOMHTcNSDEWCAWdPZKe:2"
+                                                    data-modal-header-async-url-param="changed_currency=1&amp;selected_currency=USD&amp;top_currency=1"
+                                                    href="#">
+                                                    <div class="bui-inline-container">
+                                                        <div class="bui-inline-container__main">
+                                                            Euro
+                                                            <div class="bui-traveller-header__currency">
+                                                                EUR
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </a>
+                                            </div>
+                                            <div class="col-md-3">
+                                                <a class="bui-list-item bui-list-item--size-small "
+                                                    data-et-click="customGoal:YTTHbXeeVJWcWPaDMWOMHTcNSDEWCAWdPZKe:2"
+                                                    data-modal-header-async-url-param="changed_currency=1&amp;selected_currency=USD&amp;top_currency=1"
+                                                    href="#">
+                                                    <div class="bui-inline-container">
+                                                        <div class="bui-inline-container__main">
+                                                            Euro
+                                                            <div class="bui-traveller-header__currency">
+                                                                EUR
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </a>
+                                            </div>
+                                        </div>
+                                        <h3 class="bui-f-font-strong">
+                                            Suggested for you
+                                        </h3>
+                                        <div class="row">
+                                            <div class="col-md-3">
+                                                <a class="bui-list-item bui-list-item--size-small "
+                                                    data-et-click="customGoal:YTTHbXeeVJWcWPaDMWOMHTcNSDEWCAWdPZKe:2"
+                                                    data-modal-header-async-url-param="changed_currency=1&amp;selected_currency=USD&amp;top_currency=1"
+                                                    href="#">
+                                                    <div class="bui-inline-container">
+                                                        <div class="bui-inline-container__main">
+                                                            U.S. Dollar
+                                                            <div class="bui-traveller-header__currency">
+                                                                USD
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </a>
+                                            </div>
+                                            <div class="col-md-3">
+                                                <a class="bui-list-item bui-list-item--size-small "
+                                                    data-et-click="customGoal:YTTHbXeeVJWcWPaDMWOMHTcNSDEWCAWdPZKe:2"
+                                                    data-modal-header-async-url-param="changed_currency=1&amp;selected_currency=USD&amp;top_currency=1"
+                                                    href="#">
+                                                    <div class="bui-inline-container">
+                                                        <div class="bui-inline-container__main">
+                                                            Euro
+                                                            <div class="bui-traveller-header__currency">
+                                                                EUR
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </a>
+                                            </div>
+                                            <div class="col-md-3">
+                                                <a class="bui-list-item bui-list-item--size-small "
+                                                    data-et-click="customGoal:YTTHbXeeVJWcWPaDMWOMHTcNSDEWCAWdPZKe:2"
+                                                    data-modal-header-async-url-param="changed_currency=1&amp;selected_currency=USD&amp;top_currency=1"
+                                                    href="#">
+                                                    <div class="bui-inline-container">
+                                                        <div class="bui-inline-container__main">
+                                                            Euro
+                                                            <div class="bui-traveller-header__currency">
+                                                                EUR
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </a>
+                                            </div>
+                                            <div class="col-md-3">
+                                                <a class="bui-list-item bui-list-item--size-small "
+                                                    data-et-click="customGoal:YTTHbXeeVJWcWPaDMWOMHTcNSDEWCAWdPZKe:2"
+                                                    data-modal-header-async-url-param="changed_currency=1&amp;selected_currency=USD&amp;top_currency=1"
+                                                    href="#">
+                                                    <div class="bui-inline-container">
+                                                        <div class="bui-inline-container__main">
+                                                            Euro
+                                                            <div class="bui-traveller-header__currency">
+                                                                EUR
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </a>
+                                            </div>
+                                            <div class="col-md-3">
+                                                <a class="bui-list-item bui-list-item--size-small "
+                                                    data-et-click="customGoal:YTTHbXeeVJWcWPaDMWOMHTcNSDEWCAWdPZKe:2"
+                                                    data-modal-header-async-url-param="changed_currency=1&amp;selected_currency=USD&amp;top_currency=1"
+                                                    href="#">
+                                                    <div class="bui-inline-container">
+                                                        <div class="bui-inline-container__main">
+                                                            Euro
+                                                            <div class="bui-traveller-header__currency">
+                                                                EUR
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </a>
+                                            </div>
+                                            <div class="col-md-3">
+                                                <a class="bui-list-item bui-list-item--size-small "
+                                                    data-et-click="customGoal:YTTHbXeeVJWcWPaDMWOMHTcNSDEWCAWdPZKe:2"
+                                                    data-modal-header-async-url-param="changed_currency=1&amp;selected_currency=USD&amp;top_currency=1"
+                                                    href="#">
+                                                    <div class="bui-inline-container">
+                                                        <div class="bui-inline-container__main">
+                                                            Euro
+                                                            <div class="bui-traveller-header__currency">
+                                                                EUR
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </a>
+                                            </div>
+                                            <div class="col-md-3">
+                                                <a class="bui-list-item bui-list-item--size-small "
+                                                    data-et-click="customGoal:YTTHbXeeVJWcWPaDMWOMHTcNSDEWCAWdPZKe:2"
+                                                    data-modal-header-async-url-param="changed_currency=1&amp;selected_currency=USD&amp;top_currency=1"
+                                                    href="#">
+                                                    <div class="bui-inline-container">
+                                                        <div class="bui-inline-container__main">
+                                                            Euro
+                                                            <div class="bui-traveller-header__currency">
+                                                                EUR
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </a>
+                                            </div>
+                                            <div class="col-md-3">
+                                                <a class="bui-list-item bui-list-item--size-small "
+                                                    data-et-click="customGoal:YTTHbXeeVJWcWPaDMWOMHTcNSDEWCAWdPZKe:2"
+                                                    data-modal-header-async-url-param="changed_currency=1&amp;selected_currency=USD&amp;top_currency=1"
+                                                    href="#">
+                                                    <div class="bui-inline-container">
+                                                        <div class="bui-inline-container__main">
+                                                            Euro
+                                                            <div class="bui-traveller-header__currency">
+                                                                EUR
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </a>
+                                            </div>
+                                            <div class="col-md-3">
+                                                <a class="bui-list-item bui-list-item--size-small "
+                                                    data-et-click="customGoal:YTTHbXeeVJWcWPaDMWOMHTcNSDEWCAWdPZKe:2"
+                                                    data-modal-header-async-url-param="changed_currency=1&amp;selected_currency=USD&amp;top_currency=1"
+                                                    href="#">
+                                                    <div class="bui-inline-container">
+                                                        <div class="bui-inline-container__main">
+                                                            Euro
+                                                            <div class="bui-traveller-header__currency">
+                                                                EUR
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </a>
+                                            </div>
+                                            <div class="col-md-3">
+                                                <a class="bui-list-item bui-list-item--size-small "
+                                                    data-et-click="customGoal:YTTHbXeeVJWcWPaDMWOMHTcNSDEWCAWdPZKe:2"
+                                                    data-modal-header-async-url-param="changed_currency=1&amp;selected_currency=USD&amp;top_currency=1"
+                                                    href="#">
+                                                    <div class="bui-inline-container">
+                                                        <div class="bui-inline-container__main">
+                                                            Euro
+                                                            <div class="bui-traveller-header__currency">
+                                                                EUR
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </a>
+                                            </div>
+                                            <div class="col-md-3">
+                                                <a class="bui-list-item bui-list-item--size-small "
+                                                    data-et-click="customGoal:YTTHbXeeVJWcWPaDMWOMHTcNSDEWCAWdPZKe:2"
+                                                    data-modal-header-async-url-param="changed_currency=1&amp;selected_currency=USD&amp;top_currency=1"
+                                                    href="#">
+                                                    <div class="bui-inline-container">
+                                                        <div class="bui-inline-container__main">
+                                                            Euro
+                                                            <div class="bui-traveller-header__currency">
+                                                                EUR
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </a>
+                                            </div>
+                                            <div class="col-md-3">
+                                                <a class="bui-list-item bui-list-item--size-small "
+                                                    data-et-click="customGoal:YTTHbXeeVJWcWPaDMWOMHTcNSDEWCAWdPZKe:2"
+                                                    data-modal-header-async-url-param="changed_currency=1&amp;selected_currency=USD&amp;top_currency=1"
+                                                    href="#">
+                                                    <div class="bui-inline-container">
+                                                        <div class="bui-inline-container__main">
+                                                            Euro
+                                                            <div class="bui-traveller-header__currency">
+                                                                EUR
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </a>
+                                            </div>
+                                            <div class="col-md-3">
+                                                <a class="bui-list-item bui-list-item--size-small "
+                                                    data-et-click="customGoal:YTTHbXeeVJWcWPaDMWOMHTcNSDEWCAWdPZKe:2"
+                                                    data-modal-header-async-url-param="changed_currency=1&amp;selected_currency=USD&amp;top_currency=1"
+                                                    href="#">
+                                                    <div class="bui-inline-container">
+                                                        <div class="bui-inline-container__main">
+                                                            Euro
+                                                            <div class="bui-traveller-header__currency">
+                                                                EUR
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="nav-item nav-btn">
+                        <a class="nav-link modal-btn" data-bs-toggle="modal" data-bs-target="#language">
+                            <img class="bui-avatar__image" src="
+https://t-cf.bstatic.com/static/img/flags/new/48-squared/us/fa2b2a0e643c840152ba856a8bb081c7ded40efa.png
+" alt="" height="20" width="30">
+                        </a>
+                        <!-- Modal -->
+                        <div class="modal fade" id="language" tabindex="-1" aria-labelledby="exampleModalLabel"
+                            aria-hidden="true">
+                            <div class="modal-dialog">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <h2 class="modal__title">
+                                            Select your language
+                                        </h2>
+                                        <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                            aria-label="Close"></button>
+                                    </div>
+                                    <div class="modal-body">
+                                        <h3 class="bui-f-font-strong">
+                                            Suggested for you
+                                        </h3>
+                                        <div class="row">
+                                            <div class="col-md-3">
+                                                <a class="bui-list-item bui-list-item--size-small "
+                                                    data-et-click="customGoal:YTTHbXeeVJWcWPaDMWOMHTcNSDEWCAWdPZKe:2"
+                                                    data-modal-header-async-url-param="changed_currency=1&amp;selected_currency=USD&amp;top_currency=1"
+                                                    href="#">
+                                                    <div class="bui-inline-container">
+                                                        <img class="bui-avatar__image"
+                                                            src="https://t-cf.bstatic.com/static/img/flags/new/48-squared/gb/daba79fdd4066d133e8bf59070fd6819b951c403.png"
+                                                            alt="" height="20" width="30">
+                                                        <div class="bui-inline-container__main" lang="en-gb">
+                                                            English (UK)
+                                                        </div>
+                                                    </div>
+                                                </a>
+                                            </div>
+                                            <div class="col-md-3">
+                                                <a class="bui-list-item bui-list-item--size-small "
+                                                    data-et-click="customGoal:YTTHbXeeVJWcWPaDMWOMHTcNSDEWCAWdPZKe:2"
+                                                    data-modal-header-async-url-param="changed_currency=1&amp;selected_currency=USD&amp;top_currency=1"
+                                                    href="#">
+                                                    <div class="bui-inline-container">
+                                                        <img class="bui-avatar__image"
+                                                            src="https://t-cf.bstatic.com/static/img/flags/new/48-squared/gb/daba79fdd4066d133e8bf59070fd6819b951c403.png"
+                                                            alt="" height="20" width="30">
+                                                        <div class="bui-inline-container__main" lang="en-gb">
+                                                            English (UK)
+                                                        </div>
+                                                    </div>
+                                                </a>
+                                            </div>
+                                            <div class="col-md-3">
+                                                <a class="bui-list-item bui-list-item--size-small "
+                                                    data-et-click="customGoal:YTTHbXeeVJWcWPaDMWOMHTcNSDEWCAWdPZKe:2"
+                                                    data-modal-header-async-url-param="changed_currency=1&amp;selected_currency=USD&amp;top_currency=1"
+                                                    href="#">
+                                                    <div class="bui-inline-container">
+                                                        <img class="bui-avatar__image"
+                                                            src="https://t-cf.bstatic.com/static/img/flags/new/48-squared/gb/daba79fdd4066d133e8bf59070fd6819b951c403.png"
+                                                            alt="" height="20" width="30">
+                                                        <div class="bui-inline-container__main" lang="en-gb">
+                                                            English (UK)
+                                                        </div>
+                                                    </div>
+                                                </a>
+                                            </div>
+                                            <div class="col-md-3">
+                                                <a class="bui-list-item bui-list-item--size-small "
+                                                    data-et-click="customGoal:YTTHbXeeVJWcWPaDMWOMHTcNSDEWCAWdPZKe:2"
+                                                    data-modal-header-async-url-param="changed_currency=1&amp;selected_currency=USD&amp;top_currency=1"
+                                                    href="#">
+                                                    <div class="bui-inline-container">
+                                                        <img class="bui-avatar__image"
+                                                            src="https://t-cf.bstatic.com/static/img/flags/new/48-squared/gb/daba79fdd4066d133e8bf59070fd6819b951c403.png"
+                                                            alt="" height="20" width="30">
+                                                        <div class="bui-inline-container__main" lang="en-gb">
+                                                            English (UK)
+                                                        </div>
+                                                    </div>
+                                                </a>
+                                            </div>
+                                            <div class="col-md-3">
+                                                <a class="bui-list-item bui-list-item--size-small "
+                                                    data-et-click="customGoal:YTTHbXeeVJWcWPaDMWOMHTcNSDEWCAWdPZKe:2"
+                                                    data-modal-header-async-url-param="changed_currency=1&amp;selected_currency=USD&amp;top_currency=1"
+                                                    href="#">
+                                                    <div class="bui-inline-container">
+                                                        <img class="bui-avatar__image"
+                                                            src="https://t-cf.bstatic.com/static/img/flags/new/48-squared/gb/daba79fdd4066d133e8bf59070fd6819b951c403.png"
+                                                            alt="" height="20" width="30">
+                                                        <div class="bui-inline-container__main" lang="en-gb">
+                                                            English (UK)
+                                                        </div>
+                                                    </div>
+                                                </a>
+                                            </div>
+                                            <div class="col-md-3">
+                                                <a class="bui-list-item bui-list-item--size-small "
+                                                    data-et-click="customGoal:YTTHbXeeVJWcWPaDMWOMHTcNSDEWCAWdPZKe:2"
+                                                    data-modal-header-async-url-param="changed_currency=1&amp;selected_currency=USD&amp;top_currency=1"
+                                                    href="#">
+                                                    <div class="bui-inline-container">
+                                                        <img class="bui-avatar__image"
+                                                            src="https://t-cf.bstatic.com/static/img/flags/new/48-squared/gb/daba79fdd4066d133e8bf59070fd6819b951c403.png"
+                                                            alt="" height="20" width="30">
+                                                        <div class="bui-inline-container__main" lang="en-gb">
+                                                            English (UK)
+                                                        </div>
+                                                    </div>
+                                                </a>
+                                            </div>
+                                        </div>
+                                        <h3 class="bui-f-font-strong">
+                                            Suggested for you
+                                        </h3>
+                                        <div class="row">
+                                            <div class="col-md-3">
+                                                <a class="bui-list-item bui-list-item--size-small "
+                                                    data-et-click="customGoal:YTTHbXeeVJWcWPaDMWOMHTcNSDEWCAWdPZKe:2"
+                                                    data-modal-header-async-url-param="changed_currency=1&amp;selected_currency=USD&amp;top_currency=1"
+                                                    href="#">
+                                                    <div class="bui-inline-container">
+                                                        <img class="bui-avatar__image"
+                                                            src="https://t-cf.bstatic.com/static/img/flags/new/48-squared/gb/daba79fdd4066d133e8bf59070fd6819b951c403.png"
+                                                            alt="" height="20" width="30">
+                                                        <div class="bui-inline-container__main" lang="en-gb">
+                                                            English (UK)
+                                                        </div>
+                                                    </div>
+                                                </a>
+                                            </div>
+                                            <div class="col-md-3">
+                                                <a class="bui-list-item bui-list-item--size-small "
+                                                    data-et-click="customGoal:YTTHbXeeVJWcWPaDMWOMHTcNSDEWCAWdPZKe:2"
+                                                    data-modal-header-async-url-param="changed_currency=1&amp;selected_currency=USD&amp;top_currency=1"
+                                                    href="#">
+                                                    <div class="bui-inline-container">
+                                                        <img class="bui-avatar__image"
+                                                            src="https://t-cf.bstatic.com/static/img/flags/new/48-squared/gb/daba79fdd4066d133e8bf59070fd6819b951c403.png"
+                                                            alt="" height="20" width="30">
+                                                        <div class="bui-inline-container__main" lang="en-gb">
+                                                            English (UK)
+                                                        </div>
+                                                    </div>
+                                                </a>
+                                            </div>
+                                            <div class="col-md-3">
+                                                <a class="bui-list-item bui-list-item--size-small "
+                                                    data-et-click="customGoal:YTTHbXeeVJWcWPaDMWOMHTcNSDEWCAWdPZKe:2"
+                                                    data-modal-header-async-url-param="changed_currency=1&amp;selected_currency=USD&amp;top_currency=1"
+                                                    href="#">
+                                                    <div class="bui-inline-container">
+                                                        <img class="bui-avatar__image"
+                                                            src="https://t-cf.bstatic.com/static/img/flags/new/48-squared/gb/daba79fdd4066d133e8bf59070fd6819b951c403.png"
+                                                            alt="" height="20" width="30">
+                                                        <div class="bui-inline-container__main" lang="en-gb">
+                                                            English (UK)
+                                                        </div>
+                                                    </div>
+                                                </a>
+                                            </div>
+                                            <div class="col-md-3">
+                                                <a class="bui-list-item bui-list-item--size-small "
+                                                    data-et-click="customGoal:YTTHbXeeVJWcWPaDMWOMHTcNSDEWCAWdPZKe:2"
+                                                    data-modal-header-async-url-param="changed_currency=1&amp;selected_currency=USD&amp;top_currency=1"
+                                                    href="#">
+                                                    <div class="bui-inline-container">
+                                                        <img class="bui-avatar__image"
+                                                            src="https://t-cf.bstatic.com/static/img/flags/new/48-squared/gb/daba79fdd4066d133e8bf59070fd6819b951c403.png"
+                                                            alt="" height="20" width="30">
+                                                        <div class="bui-inline-container__main" lang="en-gb">
+                                                            English (UK)
+                                                        </div>
+                                                    </div>
+                                                </a>
+                                            </div>
+                                            <div class="col-md-3">
+                                                <a class="bui-list-item bui-list-item--size-small "
+                                                    data-et-click="customGoal:YTTHbXeeVJWcWPaDMWOMHTcNSDEWCAWdPZKe:2"
+                                                    data-modal-header-async-url-param="changed_currency=1&amp;selected_currency=USD&amp;top_currency=1"
+                                                    href="#">
+                                                    <div class="bui-inline-container">
+                                                        <img class="bui-avatar__image"
+                                                            src="https://t-cf.bstatic.com/static/img/flags/new/48-squared/gb/daba79fdd4066d133e8bf59070fd6819b951c403.png"
+                                                            alt="" height="20" width="30">
+                                                        <div class="bui-inline-container__main" lang="en-gb">
+                                                            English (UK)
+                                                        </div>
+                                                    </div>
+                                                </a>
+                                            </div>
+                                            <div class="col-md-3">
+                                                <a class="bui-list-item bui-list-item--size-small "
+                                                    data-et-click="customGoal:YTTHbXeeVJWcWPaDMWOMHTcNSDEWCAWdPZKe:2"
+                                                    data-modal-header-async-url-param="changed_currency=1&amp;selected_currency=USD&amp;top_currency=1"
+                                                    href="#">
+                                                    <div class="bui-inline-container">
+                                                        <img class="bui-avatar__image"
+                                                            src="https://t-cf.bstatic.com/static/img/flags/new/48-squared/gb/daba79fdd4066d133e8bf59070fd6819b951c403.png"
+                                                            alt="" height="20" width="30">
+                                                        <div class="bui-inline-container__main" lang="en-gb">
+                                                            English (UK)
+                                                        </div>
+                                                    </div>
+                                                </a>
+                                            </div>
+                                            <div class="col-md-3">
+                                                <a class="bui-list-item bui-list-item--size-small "
+                                                    data-et-click="customGoal:YTTHbXeeVJWcWPaDMWOMHTcNSDEWCAWdPZKe:2"
+                                                    data-modal-header-async-url-param="changed_currency=1&amp;selected_currency=USD&amp;top_currency=1"
+                                                    href="#">
+                                                    <div class="bui-inline-container">
+                                                        <img class="bui-avatar__image"
+                                                            src="https://t-cf.bstatic.com/static/img/flags/new/48-squared/gb/daba79fdd4066d133e8bf59070fd6819b951c403.png"
+                                                            alt="" height="20" width="30">
+                                                        <div class="bui-inline-container__main" lang="en-gb">
+                                                            English (UK)
+                                                        </div>
+                                                    </div>
+                                                </a>
+                                            </div>
+                                            <div class="col-md-3">
+                                                <a class="bui-list-item bui-list-item--size-small "
+                                                    data-et-click="customGoal:YTTHbXeeVJWcWPaDMWOMHTcNSDEWCAWdPZKe:2"
+                                                    data-modal-header-async-url-param="changed_currency=1&amp;selected_currency=USD&amp;top_currency=1"
+                                                    href="#">
+                                                    <div class="bui-inline-container">
+                                                        <img class="bui-avatar__image"
+                                                            src="https://t-cf.bstatic.com/static/img/flags/new/48-squared/gb/daba79fdd4066d133e8bf59070fd6819b951c403.png"
+                                                            alt="" height="20" width="30">
+                                                        <div class="bui-inline-container__main" lang="en-gb">
+                                                            English (UK)
+                                                        </div>
+                                                    </div>
+                                                </a>
+                                            </div>
+                                            <div class="col-md-3">
+                                                <a class="bui-list-item bui-list-item--size-small "
+                                                    data-et-click="customGoal:YTTHbXeeVJWcWPaDMWOMHTcNSDEWCAWdPZKe:2"
+                                                    data-modal-header-async-url-param="changed_currency=1&amp;selected_currency=USD&amp;top_currency=1"
+                                                    href="#">
+                                                    <div class="bui-inline-container">
+                                                        <img class="bui-avatar__image"
+                                                            src="https://t-cf.bstatic.com/static/img/flags/new/48-squared/gb/daba79fdd4066d133e8bf59070fd6819b951c403.png"
+                                                            alt="" height="20" width="30">
+                                                        <div class="bui-inline-container__main" lang="en-gb">
+                                                            English (UK)
+                                                        </div>
+                                                    </div>
+                                                </a>
+                                            </div>
+                                            <div class="col-md-3">
+                                                <a class="bui-list-item bui-list-item--size-small "
+                                                    data-et-click="customGoal:YTTHbXeeVJWcWPaDMWOMHTcNSDEWCAWdPZKe:2"
+                                                    data-modal-header-async-url-param="changed_currency=1&amp;selected_currency=USD&amp;top_currency=1"
+                                                    href="#">
+                                                    <div class="bui-inline-container">
+                                                        <img class="bui-avatar__image"
+                                                            src="https://t-cf.bstatic.com/static/img/flags/new/48-squared/gb/daba79fdd4066d133e8bf59070fd6819b951c403.png"
+                                                            alt="" height="20" width="30">
+                                                        <div class="bui-inline-container__main" lang="en-gb">
+                                                            English (UK)
+                                                        </div>
+                                                    </div>
+                                                </a>
+                                            </div>
+                                            <div class="col-md-3">
+                                                <a class="bui-list-item bui-list-item--size-small "
+                                                    data-et-click="customGoal:YTTHbXeeVJWcWPaDMWOMHTcNSDEWCAWdPZKe:2"
+                                                    data-modal-header-async-url-param="changed_currency=1&amp;selected_currency=USD&amp;top_currency=1"
+                                                    href="#">
+                                                    <div class="bui-inline-container">
+                                                        <img class="bui-avatar__image"
+                                                            src="https://t-cf.bstatic.com/static/img/flags/new/48-squared/gb/daba79fdd4066d133e8bf59070fd6819b951c403.png"
+                                                            alt="" height="20" width="30">
+                                                        <div class="bui-inline-container__main" lang="en-gb">
+                                                            English (UK)
+                                                        </div>
+                                                    </div>
+                                                </a>
+                                            </div>
+                                            <div class="col-md-3">
+                                                <a class="bui-list-item bui-list-item--size-small "
+                                                    data-et-click="customGoal:YTTHbXeeVJWcWPaDMWOMHTcNSDEWCAWdPZKe:2"
+                                                    data-modal-header-async-url-param="changed_currency=1&amp;selected_currency=USD&amp;top_currency=1"
+                                                    href="#">
+                                                    <div class="bui-inline-container">
+                                                        <img class="bui-avatar__image"
+                                                            src="https://t-cf.bstatic.com/static/img/flags/new/48-squared/gb/daba79fdd4066d133e8bf59070fd6819b951c403.png"
+                                                            alt="" height="20" width="30">
+                                                        <div class="bui-inline-container__main" lang="en-gb">
+                                                            English (UK)
+                                                        </div>
+                                                    </div>
+                                                </a>
+                                            </div>
+                                            <div class="col-md-3">
+                                                <a class="bui-list-item bui-list-item--size-small "
+                                                    data-et-click="customGoal:YTTHbXeeVJWcWPaDMWOMHTcNSDEWCAWdPZKe:2"
+                                                    data-modal-header-async-url-param="changed_currency=1&amp;selected_currency=USD&amp;top_currency=1"
+                                                    href="#">
+                                                    <div class="bui-inline-container">
+                                                        <img class="bui-avatar__image"
+                                                            src="https://t-cf.bstatic.com/static/img/flags/new/48-squared/gb/daba79fdd4066d133e8bf59070fd6819b951c403.png"
+                                                            alt="" height="20" width="30">
+                                                        <div class="bui-inline-container__main" lang="en-gb">
+                                                            English (UK)
+                                                        </div>
+                                                    </div>
+                                                </a>
+                                            </div>
+                                            <div class="col-md-3">
+                                                <a class="bui-list-item bui-list-item--size-small "
+                                                    data-et-click="customGoal:YTTHbXeeVJWcWPaDMWOMHTcNSDEWCAWdPZKe:2"
+                                                    data-modal-header-async-url-param="changed_currency=1&amp;selected_currency=USD&amp;top_currency=1"
+                                                    href="#">
+                                                    <div class="bui-inline-container">
+                                                        <img class="bui-avatar__image"
+                                                            src="https://t-cf.bstatic.com/static/img/flags/new/48-squared/gb/daba79fdd4066d133e8bf59070fd6819b951c403.png"
+                                                            alt="" height="20" width="30">
+                                                        <div class="bui-inline-container__main" lang="en-gb">
+                                                            English (UK)
+                                                        </div>
+                                                    </div>
+                                                </a>
+                                            </div>
+                                            <div class="col-md-3">
+                                                <a class="bui-list-item bui-list-item--size-small "
+                                                    data-et-click="customGoal:YTTHbXeeVJWcWPaDMWOMHTcNSDEWCAWdPZKe:2"
+                                                    data-modal-header-async-url-param="changed_currency=1&amp;selected_currency=USD&amp;top_currency=1"
+                                                    href="#">
+                                                    <div class="bui-inline-container">
+                                                        <img class="bui-avatar__image"
+                                                            src="https://t-cf.bstatic.com/static/img/flags/new/48-squared/gb/daba79fdd4066d133e8bf59070fd6819b951c403.png"
+                                                            alt="" height="20" width="30">
+                                                        <div class="bui-inline-container__main" lang="en-gb">
+                                                            English (UK)
+                                                        </div>
+                                                    </div>
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="nav-item nav-btn">
+                        <a class="nav-link" aria-current="page" href="#">
+                            <svg class="bk-icon -streamline-question_mark_circle" height="24" width="24"
+                                viewBox="0 0 24 24" role="presentation" aria-hidden="true" focusable="false">
+                                <path
+                                    d="M9.75 9a2.25 2.25 0 1 1 3 2.122 2.25 2.25 0 0 0-1.5 2.122v1.006a.75.75 0 0 0 1.5 0v-1.006c0-.318.2-.602.5-.708A3.75 3.75 0 1 0 8.25 9a.75.75 0 1 0 1.5 0zM12 16.5a1.125 1.125 0 1 0 0 2.25 1.125 1.125 0 0 0 0-2.25.75.75 0 0 0 0 1.5.375.375 0 1 1 0-.75.375.375 0 0 1 0 .75.75.75 0 0 0 0-1.5zM22.5 12c0 5.799-4.701 10.5-10.5 10.5S1.5 17.799 1.5 12 6.201 1.5 12 1.5 22.5 6.201 22.5 12zm1.5 0c0-6.627-5.373-12-12-12S0 5.373 0 12s5.373 12 12 12 12-5.373 12-12z">
+                                </path>
+                            </svg>
+                        </a>
+                    </li>
+                    <li class="nav-item property-btn me-2">
+                        <a class="nav-link" aria-current="page" href="#">List of property</a>
+                    </li>
+                    <li class="nav-item auth-btn me-2">
+                        <a class="nav-link" aria-current="page" href="#">Register</a>
+                    </li>
+                    <li class="nav-item auth-btn me-2">
+                        <a class="nav-link" aria-current="page" href="#">Login</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+        <div class="second-nav">
+            <div class="d-flex">
+                <a href="#" class="category-btn active-category-btn">
+                    <svg class="bk-icon -streamline-bed" height="24" width="24" viewBox="0 0 24 24" role="presentation"
+                        aria-hidden="true" focusable="false" fill="#fff">
+                        <path
+                            d="M2.75 12h18.5c.69 0 1.25.56 1.25 1.25V18l.75-.75H.75l.75.75v-4.75c0-.69.56-1.25 1.25-1.25zm0-1.5A2.75 2.75 0 0 0 0 13.25V18c0 .414.336.75.75.75h22.5A.75.75 0 0 0 24 18v-4.75a2.75 2.75 0 0 0-2.75-2.75H2.75zM0 18v3a.75.75 0 0 0 1.5 0v-3A.75.75 0 0 0 0 18zm22.5 0v3a.75.75 0 0 0 1.5 0v-3a.75.75 0 0 0-1.5 0zm-.75-6.75V4.5a2.25 2.25 0 0 0-2.25-2.25h-15A2.25 2.25 0 0 0 2.25 4.5v6.75a.75.75 0 0 0 1.5 0V4.5a.75.75 0 0 1 .75-.75h15a.75.75 0 0 1 .75.75v6.75a.75.75 0 0 0 1.5 0zm-13.25-3h7a.25.25 0 0 1 .25.25v2.75l.75-.75h-9l.75.75V8.5a.25.25 0 0 1 .25-.25zm0-1.5A1.75 1.75 0 0 0 6.75 8.5v2.75c0 .414.336.75.75.75h9a.75.75 0 0 0 .75-.75V8.5a1.75 1.75 0 0 0-1.75-1.75h-7z">
+                        </path>
+                    </svg>
+                    <span>Stays</span>
+                </a>
+                <a href="#" class="category-btn">
+                    <svg class="bk-icon -streamline-transport_airplane" height="24" width="24" viewBox="0 0 24 24"
+                        role="presentation" aria-hidden="true" focusable="false" fill="#fff">
+                        <path
+                            d="M20.505 7.5l-15.266.022.672.415-1.1-2.2a.75.75 0 0 0-.638-.414l-2.293-.1C.82 5.228-.003 6.06.003 7.083c.002.243.051.484.146.709l2.072 4.68a2.947 2.947 0 0 0 2.701 1.778h4.043l-.676-1.075-2.484 5.168A1.831 1.831 0 0 0 7.449 21h2.099a1.85 1.85 0 0 0 1.419-.664l5.165-6.363-.582.277h4.956c1.82.09 3.399-1.341 3.49-3.198l.004-.134a3.426 3.426 0 0 0-3.44-3.419l-.074.001zm.02 1.5h.042a1.924 1.924 0 0 1 1.933 1.914l-.002.065a1.866 1.866 0 0 1-1.955 1.772l-4.993-.001a.75.75 0 0 0-.582.277l-5.16 6.355a.346.346 0 0 1-.26.118h-2.1a.336.336 0 0 1-.3-.49l2.493-5.185a.75.75 0 0 0-.676-1.075H4.924a1.45 1.45 0 0 1-1.328-.878l-2.07-4.676a.35.35 0 0 1 .326-.474l2.255.1-.638-.415 1.1 2.2a.75.75 0 0 0 .672.415L20.507 9zM16.323 7.76l-2.992-4.02A1.851 1.851 0 0 0 11.85 3H9.783a1.85 1.85 0 0 0-1.654 2.672l1.439 2.91a.75.75 0 0 0 1.344-.664L9.472 5.007a.351.351 0 0 1 .312-.507h2.066a.35.35 0 0 1 .279.14l2.99 4.017a.75.75 0 1 0 1.203-.896z">
+                        </path>
+                    </svg>
+                    <span>Flights</span>
+                </a>
+                <a href="#" class="category-btn">
+                    <svg class="bk-icon -streamline-transport_car" height="24" width="24" viewBox="0 0 24 24"
+                        role="presentation" aria-hidden="true" focusable="false" fill="#fff">
+                        <path
+                            d="M21.684 9.443l-1.7-3.79c-.42-1.128-1.542-1.905-2.794-1.903H6.809a2.999 2.999 0 0 0-2.811 1.947L2.316 9.443a.75.75 0 1 0 1.368.614l1.7-3.79c.238-.63.798-1.018 1.424-1.017h10.383a1.5 1.5 0 0 1 1.407.973l1.718 3.834a.75.75 0 1 0 1.368-.614zM.75 16.468V18a2.25 2.25 0 0 0 4.5 0v-1.5a.75.75 0 0 0-1.5 0V18a.75.75 0 0 1-1.5 0v-1.532a.75.75 0 0 0-1.5 0zm21 0V18a.75.75 0 0 1-1.5 0v-1.5a.75.75 0 0 0-1.5 0V18a2.25 2.25 0 0 0 4.5 0v-1.532a.75.75 0 0 0-1.5 0zM19.875 13.5a.375.375 0 0 1-.375-.375.75.75 0 0 0 1.5 0c0-.621-.504-1.125-1.125-1.125a.75.75 0 0 0 0 1.5zm.375-.375a.375.375 0 0 1-.375.375.75.75 0 0 0 0-1.5c-.621 0-1.125.504-1.125 1.125a.75.75 0 0 0 1.5 0zm-.375-.375c.207 0 .375.168.375.375a.75.75 0 0 0-1.5 0c0 .621.504 1.125 1.125 1.125a.75.75 0 0 0 0-1.5zm-.375.375c0-.207.168-.375.375-.375a.75.75 0 0 0 0 1.5c.621 0 1.125-.504 1.125-1.125a.75.75 0 0 0-1.5 0zM4.125 12C3.504 12 3 12.504 3 13.125a.75.75 0 0 0 1.5 0 .375.375 0 0 1-.375.375.75.75 0 0 0 0-1.5zm1.125 1.125c0-.621-.504-1.125-1.125-1.125a.75.75 0 0 0 0 1.5.375.375 0 0 1-.375-.375.75.75 0 0 0 1.5 0zM4.125 14.25c.621 0 1.125-.504 1.125-1.125a.75.75 0 0 0-1.5 0c0-.207.168-.375.375-.375a.75.75 0 0 0 0 1.5zM3 13.125c0 .621.504 1.125 1.125 1.125a.75.75 0 0 0 0-1.5c.207 0 .375.168.375.375a.75.75 0 0 0-1.5 0zM2.75 10.5h18.5c.69 0 1.25.56 1.25 1.25v3.75a.25.25 0 0 1-.25.25H1.75a.25.25 0 0 1-.25-.25v-3.75c0-.69.56-1.25 1.25-1.25zm0-1.5A2.75 2.75 0 0 0 0 11.75v3.75c0 .966.784 1.75 1.75 1.75h20.5A1.75 1.75 0 0 0 24 15.5v-3.75A2.75 2.75 0 0 0 21.25 9H2.75z">
+                        </path>
+                    </svg>
+                    <span>Car rentals</span>
+                </a>
+                <a href="#" class="category-btn">
+                    <svg class="bk-icon -streamline-attractions" height="24" width="24" viewBox="0 0 24 24"
+                        role="presentation" aria-hidden="true" focusable="false" fill="#fff">
+                        <path
+                            d="M13.5 3a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0zM15 3a3 3 0 1 0-6 0 3 3 0 0 0 6 0zm6 4.5a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0zm1.5 0a3 3 0 1 0-6 0 3 3 0 0 0 6 0zM6 7.5a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0zm1.5 0a3 3 0 1 0-6 0 3 3 0 0 0 6 0zM21 15a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0zm1.5 0a3 3 0 1 0-6 0 3 3 0 0 0 6 0zm-9-3.75a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0zm1.5 0a3 3 0 1 0-6 0 3 3 0 0 0 6 0zM6 15a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0zm1.5 0a3 3 0 1 0-6 0 3 3 0 0 0 6 0zm10.066 1.277a7.5 7.5 0 0 1-3.077 2.05.75.75 0 0 0 .498 1.415 9 9 0 0 0 3.693-2.46.75.75 0 1 0-1.114-1.005zm1.798-6.466c.177.922.183 1.869.015 2.792a.75.75 0 1 0 1.476.268c.2-1.106.194-2.24-.019-3.344a.75.75 0 1 0-1.472.284zm-5.337-5.784a7.5 7.5 0 0 1 3.54 2.196.75.75 0 0 0 1.113-1.004 9.002 9.002 0 0 0-4.247-2.636.75.75 0 1 0-.406 1.444zM6.434 6.223a7.5 7.5 0 0 1 3.539-2.196.75.75 0 1 0-.406-1.444A9.001 9.001 0 0 0 5.32 5.219a.75.75 0 0 0 1.114 1.004zM4.636 12.69a7.602 7.602 0 0 1 0-2.878.75.75 0 1 0-1.472-.284 9.102 9.102 0 0 0 0 3.446.75.75 0 0 0 1.472-.284zm4.876 5.639a7.517 7.517 0 0 1-3.035-2.005.75.75 0 0 0-1.106 1.014 9.017 9.017 0 0 0 3.641 2.405.75.75 0 1 0 .5-1.414zM7.31 21.872A1.5 1.5 0 0 0 8.672 24h6.656a1.5 1.5 0 0 0 1.362-2.128l-3.314-8.217c-.361-.785-1.252-1.114-2.005-.767a1.5 1.5 0 0 0-.733.734l-3.343 8.283zm1.377.595l3.328-8.25-.015.033 3.313 8.217.015.033H8.672z">
+                        </path>
+                    </svg>
+                    <span>Attractions</span>
+                </a>
+                <a href="#" class="category-btn">
+                    <svg class="bk-icon -streamline-taxi_sign" height="24" width="24" viewBox="0 0 24 24"
+                        role="presentation" aria-hidden="true" focusable="false" fill="#fff">
+                        <path
+                            d="M21.75 15.5V8a.75.75 0 0 0-1.5 0v7.5a.75.75 0 0 0 1.5 0zm-16.5 0V8a.75.75 0 0 0-1.5 0v7.5a.75.75 0 0 0 1.5 0zM3 8.75h3a.75.75 0 0 0 0-1.5H3a.75.75 0 0 0 0 1.5zm6.75 6.75v-6a.75.75 0 0 1 1.5 0v6a.75.75 0 0 0 1.5 0v-6a2.25 2.25 0 0 0-4.5 0v6a.75.75 0 0 0 1.5 0zM9 13.25h3a.75.75 0 0 0 0-1.5H9a.75.75 0 0 0 0 1.5zm5.304-4.971l3 7.5a.75.75 0 0 0 1.392-.557l-3-7.5a.75.75 0 0 0-1.392.557zm3-.558l-3 7.5a.75.75 0 0 0 1.392.557l3-7.5a.75.75 0 0 0-1.392-.557zM.75 5h22.5a.75.75 0 0 0 0-1.5H.75a.75.75 0 0 0 0 1.5zm0 15h22.5a.75.75 0 0 0 0-1.5H.75a.75.75 0 0 0 0 1.5z">
+                        </path>
+                    </svg>
+                    <span>Airport Taxis</span>
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <div class="bg-overlay"></div>
+    <video class="bg-video" autoplay="" muted="" playsinline="" loop="" poster="./media/bg-poster.jpg">
+        <source src="./media/bg.mp4" type="video/mp4">
+        <source src="./media/bg.webm" type="video/webm"><img src="./media/bg-poster.jpg"
+            title="Your browser does not support the <video> tag" alt="">
+    </video>
+    <div class="container">
+        <div class="banner">
+            <div class="banner-content">
+                <p class="offer-time my-3">Offer ends in 3 days</p>
+                <h1 class="tagline my-3">Make your dream trip happen with Black Friday Deals</h1>
+                <p class="offer-limit my-3">Save 30% on stays and enjoy extra savings on rental cars</p>
+                <a href="#" class="btn btn-primary mt-5 mb-3">Find deals</a>
+            </div>
+        </div>
+    </div>
+    <footer class="footer">
+        <div class="container">
+            <div class="offer">
+                <div class="offer-box">
+                    <svg width="64" height="64" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <rect x="23" y="8" width="18" height="18" fill="white" />
+                        <path
+                            d="M58.25 26.25H41.5617C40.822 26.25 40.0126 26.8323 39.7088 27.5079C39.544 27.6269 39.3645 27.6288 38.5699 27.4988C37.7752 27.3669 36.6949 27.193 35.479 27.5756C34.2559 27.9675 33.4795 28.7549 32.9155 29.3298C32.3186 29.9341 32.2014 30 32 30C31.7986 30 31.6814 29.9341 31.0845 29.3299C30.5205 28.7549 29.7441 27.9676 28.521 27.5758C27.3051 27.193 26.2249 27.367 25.4301 27.4989C24.6464 27.627 24.4596 27.6289 24.152 27.3615C23.848 26.6859 23.1779 26.25 22.4381 26.25H5.75C4.71362 26.25 3.875 27.0886 3.875 28.125V62.125C3.875 63.1614 4.71362 64 5.75 64H58.25C59.2864 64 60.125 63.1614 60.125 62.125V28.125C60.125 27.0886 59.2864 26.25 58.25 26.25Z"
+                            fill="#FF3366" />
+                        <path
+                            d="M52.0757 53.0494L43.1417 44.114L51.9217 37.0899C52.731 36.4416 52.8592 35.2625 52.2147 34.4531C51.5702 33.6493 50.3909 33.5138 49.5779 34.1601L32 48.2226L14.4218 34.1601C13.6162 33.5174 12.437 33.6474 11.7852 34.4531C11.1405 35.2625 11.2688 36.4416 12.078 37.0899L20.8583 44.114L11.9243 53.0494C11.1919 53.7817 11.1919 54.9684 11.9243 55.7007C12.6567 56.4331 13.8432 56.4332 14.5757 55.7007L23.8042 46.4706C30.52 51.8019 30.8063 52.1409 31.2824 52.3399C31.7949 52.5537 32.2072 52.5521 32.7157 52.3404C33.1894 52.1441 33.4985 51.7871 40.1958 46.4707L49.4243 55.7009C50.1567 56.4333 51.3432 56.4334 52.0757 55.7009C52.8082 54.9683 52.8082 53.7817 52.0757 53.0494ZM15.9499 22.0875C16.5125 23.8124 17.8624 24.4874 18.7624 24.9373C19.325 25.2374 19.6627 25.4247 19.8875 25.7249C20.075 25.9874 20.15 26.3622 20.2249 26.9625C20.4242 28.0243 20.5239 29.3802 22.0999 30.5624C23.5624 31.6125 25.025 31.35 26.0374 31.2C26.6375 31.0874 27.05 31.0499 27.3875 31.1625C27.6874 31.2374 27.9874 31.5374 28.3999 31.9499C29.1124 32.6624 30.1625 33.75 32 33.75C33.8375 33.75 34.8877 32.6624 35.6002 31.9499C36.0127 31.5374 36.3127 31.2374 36.6125 31.1625C36.9502 31.0499 37.3625 31.0874 37.9627 31.2C38.9374 31.3499 40.4375 31.6125 41.9002 30.5624C43.4424 29.4055 43.5632 28.0919 43.7752 26.9625C43.85 26.3624 43.925 25.9875 44.1125 25.6874C44.3375 25.4249 44.6752 25.2374 45.2377 24.9374C46.1377 24.4874 47.4875 23.8124 48.0127 22.1249C48.6125 20.3625 47.9 19.0125 47.45 18.1124C47.1875 17.5875 47 17.2124 47 16.875C47 16.5374 47.1875 16.1625 47.45 15.6374C47.9 14.7374 48.6125 13.3875 48.0502 11.6624C47.4875 9.93725 46.1377 9.26237 45.2377 8.81238C44.675 8.51225 44.3374 8.32487 44.1125 8.06238C43.925 7.7625 43.85 7.38737 43.7752 6.75C43.625 5.775 43.4 4.31238 41.9002 3.1875C40.4375 2.1375 38.975 2.4 37.9627 2.55C37.325 2.66237 36.95 2.69988 36.6125 2.5875C36.3127 2.51238 36.0127 2.21237 35.6002 1.79988C34.8877 1.08738 33.8375 0 32 0C30.1625 0 29.1124 1.08738 28.3999 1.79988C27.9874 2.21237 27.6874 2.51238 27.3875 2.5875C27.0499 2.69988 26.6375 2.66237 26.0374 2.55C25.0627 2.40013 23.5625 2.1375 22.0624 3.225C20.6 4.31238 20.375 5.775 20.2249 6.75C20.15 7.38737 20.075 7.76263 19.8875 8.06238C19.6625 8.32487 19.3249 8.51237 18.7624 8.81238C17.8624 9.26237 16.5125 9.93738 15.9874 11.6249C15.3875 13.3875 16.1 14.7375 16.55 15.6374C16.8125 16.1624 17 16.5374 17 16.875C17 17.2124 16.8125 17.5875 16.55 18.1124C16.1 19.0125 15.3875 20.3625 15.9499 22.0875ZM35.75 24.375C34.6999 24.375 33.875 23.5499 33.875 22.5C33.875 21.4499 34.6999 20.625 35.75 20.625C36.8002 20.625 37.625 21.4499 37.625 22.5C37.625 23.5499 36.8002 24.375 35.75 24.375ZM28.25 9.375C29.3002 9.375 30.125 10.1999 30.125 11.25C30.125 12.2999 29.3002 13.125 28.25 13.125C27.1999 13.125 26.375 12.2999 26.375 11.25C26.375 10.1999 27.1999 9.375 28.25 9.375ZM26.6752 21.4499L34.1752 10.1999C34.775 9.3375 35.9375 9.1125 36.8002 9.67488C37.6625 10.275 37.8875 11.4375 37.325 12.2999L29.825 23.5499C29.2808 24.3121 28.2653 24.6664 27.2 24.0749C26.3375 23.475 26.1125 22.3125 26.6752 21.4499Z"
+                            fill="#FFC7D5" />
+                        <mask id="mask0" mask-type="alpha" maskUnits="userSpaceOnUse" x="11" y="0" width="42"
+                            height="57">
+                            <path
+                                d="M52.0757 53.0494L43.1417 44.114L51.9217 37.0899C52.731 36.4416 52.8592 35.2625 52.2147 34.4531C51.5702 33.6493 50.3909 33.5138 49.5779 34.1601L32 48.2226L14.4218 34.1601C13.6162 33.5174 12.437 33.6474 11.7852 34.4531C11.1405 35.2625 11.2688 36.4416 12.078 37.0899L20.8583 44.114L11.9243 53.0494C11.1919 53.7817 11.1919 54.9684 11.9243 55.7007C12.6567 56.4331 13.8432 56.4332 14.5757 55.7007L23.8042 46.4706C30.52 51.8019 30.8063 52.1409 31.2824 52.3399C31.7949 52.5537 32.2072 52.5521 32.7157 52.3404C33.1894 52.1441 33.4985 51.7871 40.1958 46.4707L49.4243 55.7009C50.1567 56.4333 51.3432 56.4334 52.0757 55.7009C52.8082 54.9683 52.8082 53.7817 52.0757 53.0494ZM15.9499 22.0875C16.5125 23.8124 17.8624 24.4874 18.7624 24.9373C19.325 25.2374 19.6627 25.4247 19.8875 25.7249C20.075 25.9874 20.15 26.3622 20.2249 26.9625C20.4242 28.0243 20.5239 29.3802 22.0999 30.5624C23.5624 31.6125 25.025 31.35 26.0374 31.2C26.6375 31.0874 27.05 31.0499 27.3875 31.1625C27.6874 31.2374 27.9874 31.5374 28.3999 31.9499C29.1124 32.6624 30.1625 33.75 32 33.75C33.8375 33.75 34.8877 32.6624 35.6002 31.9499C36.0127 31.5374 36.3127 31.2374 36.6125 31.1625C36.9502 31.0499 37.3625 31.0874 37.9627 31.2C38.9374 31.3499 40.4375 31.6125 41.9002 30.5624C43.4424 29.4055 43.5632 28.0919 43.7752 26.9625C43.85 26.3624 43.925 25.9875 44.1125 25.6874C44.3375 25.4249 44.6752 25.2374 45.2377 24.9374C46.1377 24.4874 47.4875 23.8124 48.0127 22.1249C48.6125 20.3625 47.9 19.0125 47.45 18.1124C47.1875 17.5875 47 17.2124 47 16.875C47 16.5374 47.1875 16.1625 47.45 15.6374C47.9 14.7374 48.6125 13.3875 48.0502 11.6624C47.4875 9.93725 46.1377 9.26237 45.2377 8.81238C44.675 8.51225 44.3374 8.32487 44.1125 8.06238C43.925 7.7625 43.85 7.38737 43.7752 6.75C43.625 5.775 43.4 4.31238 41.9002 3.1875C40.4375 2.1375 38.975 2.4 37.9627 2.55C37.325 2.66237 36.95 2.69988 36.6125 2.5875C36.3127 2.51238 36.0127 2.21237 35.6002 1.79988C34.8877 1.08738 33.8375 0 32 0C30.1625 0 29.1124 1.08738 28.3999 1.79988C27.9874 2.21237 27.6874 2.51238 27.3875 2.5875C27.0499 2.69988 26.6375 2.66237 26.0374 2.55C25.0627 2.40013 23.5625 2.1375 22.0624 3.225C20.6 4.31238 20.375 5.775 20.2249 6.75C20.15 7.38737 20.075 7.76263 19.8875 8.06238C19.6625 8.32487 19.3249 8.51237 18.7624 8.81238C17.8624 9.26237 16.5125 9.93738 15.9874 11.6249C15.3875 13.3875 16.1 14.7375 16.55 15.6374C16.8125 16.1624 17 16.5374 17 16.875C17 17.2124 16.8125 17.5875 16.55 18.1124C16.1 19.0125 15.3875 20.3625 15.9499 22.0875ZM35.75 24.375C34.6999 24.375 33.875 23.5499 33.875 22.5C33.875 21.4499 34.6999 20.625 35.75 20.625C36.8002 20.625 37.625 21.4499 37.625 22.5C37.625 23.5499 36.8002 24.375 35.75 24.375ZM28.25 9.375C29.3002 9.375 30.125 10.1999 30.125 11.25C30.125 12.2999 29.3002 13.125 28.25 13.125C27.1999 13.125 26.375 12.2999 26.375 11.25C26.375 10.1999 27.1999 9.375 28.25 9.375ZM26.6752 21.4499L34.1752 10.1999C34.775 9.3375 35.9375 9.1125 36.8002 9.67488C37.6625 10.275 37.8875 11.4375 37.325 12.2999L29.825 23.5499C29.2808 24.3121 28.2653 24.6664 27.2 24.0749C26.3375 23.475 26.1125 22.3125 26.6752 21.4499Z"
+                                fill="#FF3366" />
+                        </mask>
+                        <g mask="url(#mask0)">
+                            <path d="M8 33L32.5 34.5L54.5 31.5L58 62H8V33Z" fill="white" />
+                        </g>
+                    </svg>
+                    <div class="row">
+                        <div class="col-sm-7 col-md-7 col-lg-7">
+                            <div class="offer-type">
+                                <p>Want to save up to 50% on hotel and flight booking?</p>
+                                <span>Enter your phone number so that Mytour can send you the latest promotions!</span>
+                            </div>
+                        </div>
+                        <div class="col-md-5 col-sm-5 col-lg-5">
+                            <form class="sign-up" novalidate="" autocomplete="off">
+                                <div class="input-number"><input placeholder="Enter your phone number" type="text"
+                                        class="MuiInputBase-input MuiInput-input" value=""></div>
+                                <div class="MuiBox-root jss550" style="width: fit-content;">
+                                    <button class="btn-red" tabindex="0" type="button" margin="-10"><span
+                                            class="MuiButton-label">
+                                            <div class="MuiBox-root jss552">
+                                                <div class="MuiBox-root jss553" opacity="1">Sign up</div>
+                                            </div>
+                                        </span><span class="MuiTouchRipple-root"></span></button>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-main">
+                <span>
+                    <img src="./media/logo-footer.svg" class="logo-footer" alt="logo_mytour_footer">
+                </span>
+                <div class="row footer-informations" style="margin-top: 24px;">
+                    <div class="col-md-5 col-sm-12 col-lg-5">
+                        <p class="footer-info-title">VNTRAVEL VIET NAM TOURISM JOINT STOCK
+                            COMPANY</p>
+                        <p class="footer-info">Hotline: 1900 2083</p>
+                        <p class="footer-info">Email: hotro@mytour.vn</p>
+                        <p class="footer-info">Floor 11, Peakview building, 36 Hoang
+                            Cau Street, Dong Da district</p>
+                        <p class="footer-info">Office HCM: Floor 6, Central Park
+                            building, 117 Nguyen Du Street, District 1</p>
+                        <p class="footer-info">Mytour Store: 168 Xã Đàn, Đống Đa, Hà
+                            Nội</p>
+                        <div class="partner-logos">
+                            <a class="partner-logo" target="_blank" rel="nofollow" href="#">
+                                <img src="./media/partner-logo-blue.png" alt="" style="width: 160px;">
+                            </a>
+                            <a class="partner-logo" target="_blank" rel="nofollow" href="#">
+                                <img src="./media/partner-logo-red.png" alt="" style="width: 160px;">
+                            </a>
+                        </div>
+                    </div>
+                    <div class="col-md-4 col-sm-12 col-lg-4">
+                        <p class="footer-info-title">Terms &amp; Policies</p>
+                        <div class="footer-links">
+                            <a class="footer-link" target="_blank" href="#">
+                                <span class="MuiBox-root jss501">Terms and Conditions</span>
+                            </a>
+                            <a class="footer-link" target="_blank" href="#">
+                                <span class="">Payment Terms</span>
+                            </a>
+                            <a class="footer-link" target="_blank" href="#">
+                                <span class="">Terms of Booking Information</span>
+                            </a>
+                            <a class="footer-link" target="_blank" href="#">
+                                <span class="">Cancellation and Refund Policy</span>
+                            </a>
+                            <a class="footer-link" target="_blank" href="#">
+                                <span class="">Privacy Policy</span>
+                            </a>
+                            <a class="footer-link" target="_blank" href="#">
+                                <span class="">Operational Regulations</span>
+                            </a>
+                            <a class="footer-link" target="_blank" href="#">
+                                <span class="">Complaint and dispute settlement procedures</span></a><a
+                                class="footer-link" target="_blank" href="#">
+                                <span class="">Domestic travel regulations</span>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="col-md-3 col-sm-12 col-lg-3">
+                        <p class="footer-info-title">Customer &amp; Partner</p>
+                        <div class="footer-links">
+                            <a class="footer-link" target="_blank" rel="nofollow" href="#">
+                                <span class="">Đăng nhập HMS</span>
+                            </a>
+                            <a class="footer-link" target="_blank" rel="nofollow" href="#">
+                                <span class="">Recruiment</span>
+                            </a>
+                            <a class="footer-link" target="_blank" rel="nofollow" href="#">
+                                <span class="">Contacts</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <hr>
+            </div>
+        </div>
+        <div class="footer-end">
+            <div class="container">
+                <div class="footer-end-container">
+                    <p class="footer-info">Mytour is a member of VNTravel Group -
+                        One of the leading corporations in Southeast Asia in online travel and related services.</p>
+                    <div class="related-service-logos">
+                        <div class="jss342 jss337">
+                            <div class="jss343 jss346"></div>
+                            <div class="lazyload-wrapper"><img
+                                    src="https://storage.googleapis.com/tripi-assets/mytour/icons/icon_company_group.svg"
+                                    class="jss345 jss337" alt="vntravel_company_logo"></div>
+                        </div>
+                    </div>
+                    <p class="footer-info">Copyright © 2020 - VNTRAVEL VIET NAM
+                        TOURISM JOINT STOCK COMPANY - Company registration number 0108886908 - First issued:
+                        04/09/2019. Grant: By the Department of Planning and Investment of Hanoi City</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <script src="static/js/bootstrap.min.js"></script>
+</body>
+
+</html>
