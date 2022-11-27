@@ -124,7 +124,7 @@
     --DO_NOT_USE_bui_small_font_display_2_font-weight: 700;
     --DO_NOT_USE_bui_small_font_display_2_line-height: 52px;
     --DO_NOT_USE_bui_small_font_display_2_font-family: BlinkMacSystemFont, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif;
-    --DO_NOT_USE_bui_small_font_display_3_font-size: 40px;
+    --DO_NOT_USE_bui_small_font_display_3_font-size: 30px;
     --DO_NOT_USE_bui_small_font_display_3_font-weight: 700;
     --DO_NOT_USE_bui_small_font_display_3_line-height: 52px;
     --DO_NOT_USE_bui_small_font_display_3_font-family: BlinkMacSystemFont, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif;
@@ -299,8 +299,9 @@
 }
 
 
-nav {
+.navigation {
     background-color: transparent !important;
+    padding: 15px 0;
 }
 
 .bg-overlay {
@@ -315,6 +316,17 @@ nav {
     right: 0;
 }
 
+@media (max-width:600px) {
+    .navigation {
+        background-color: var(--bui_color_cta_background) !important;
+    }
+
+    .bg-overlay {
+        background: none;
+    }
+}
+
+
 .bg-video {
     top: 0;
     height: 600px;
@@ -326,6 +338,13 @@ nav {
     object-fit: cover;
     width: 100%;
     z-index: -2;
+}
+
+@media (max-width:600px) {
+    .bg-video {
+        top: 150px;
+        height: 400px;
+    }
 }
 
 .nav-btn {
@@ -467,11 +486,9 @@ body .bui_font_strong {
 }
 
 @media (max-width: 600px) {
-    nav{
-        background-color: white !important;
-    }
     .banner-content {
         max-width: 100%;
+        text-align: center;
     }
 }
 
@@ -497,6 +514,7 @@ body .bui_font_strong {
 }
 
 .tagline {
+    text-align: center;
     font-family: Avenir Next, BlinkMacSystemFont, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif;
     color: white;
     font-family: var(--DO_NOT_USE_bui_small_font_display_3_font-family);
@@ -527,6 +545,7 @@ body .bui_font_strong {
 }
 
 .offer-limit {
+    text-align: center;
     font-family: Avenir Next, BlinkMacSystemFont, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif;
     margin-bottom: 0;
     margin-top: var(--bui_spacing_1x);
