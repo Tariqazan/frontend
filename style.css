@@ -465,6 +465,12 @@ body .bui_font_strong {
     max-width: 60%;
 }
 
+@media (max-width: 600px) {
+    .banner-content {
+        max-width: 100%;
+    }
+}
+
 .offer-time {
     margin-bottom: var(--bui_spacing_2x);
     color: var(--bui_color_white);
@@ -710,7 +716,6 @@ form.sign-up {
 .footer-end-container {
     width: 100%;
     margin: 0 auto;
-    max-width: 1188px;
     text-align: center;
 }
 
