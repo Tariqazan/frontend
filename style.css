@@ -420,6 +420,7 @@ body .bui_font_strong {
 }
 
 .second-nav {
+    margin-top: 20px;
     width: 100%;
     overflow-x: hidden;
 }
@@ -466,6 +467,9 @@ body .bui_font_strong {
 }
 
 @media (max-width: 600px) {
+    nav{
+        background-color: white !important;
+    }
     .banner-content {
         max-width: 100%;
     }
@@ -479,6 +483,7 @@ body .bui_font_strong {
     font-size: var(--DO_NOT_USE_bui_small_font_featured_2_font-size);
     font-weight: var(--DO_NOT_USE_bui_small_font_featured_2_font-weight);
     line-height: var(--DO_NOT_USE_bui_small_font_featured_2_line-height);
+    text-align: center;
 }
 
 
