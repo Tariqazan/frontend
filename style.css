@@ -318,7 +318,7 @@
 
 @media (max-width:600px) {
     .navigation {
-        background-color: var(--bui_color_cta_background) !important;
+        background-color: var(--bui_color_brand_primary_background_dynamic) !important;
     }
 
     .bg-overlay {
@@ -583,7 +583,6 @@ footer .footer {
 .offer {
     width: 100%;
     display: flex;
-    flex-wrap: wrap;
     box-sizing: border-box;
     margin-bottom: 40px;
 }
