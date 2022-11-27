@@ -419,13 +419,27 @@ body .bui_font_strong {
     font-family: var(--DO_NOT_USE_bui_large_font_body_2_font-family);
 }
 
+.second-nav {
+    width: 100%;
+    overflow-x: hidden;
+}
+
+@media (max-width:'600px') {
+    .second-nav {
+        overflow-x: scroll;
+    }
+
+}
+
 .category-btn {
+    white-space: nowrap;
+    display: flex;
     font-size: 15px;
     text-decoration: none;
     color: white;
     font-weight: 500;
-    margin-left: 20px;
     padding: 10px 15px;
+    margin: 0 5px 0 0;
 }
 
 .category-btn:hover {
@@ -437,6 +451,10 @@ body .bui_font_strong {
 .active-category-btn {
     border: 1px solid white;
     border-radius: 30px;
+}
+
+.category-btn span {
+    margin-left: 10px;
 }
 
 .banner {
