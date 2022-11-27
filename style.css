@@ -758,3 +758,12 @@ form.sign-up {
         background: none;
     }
 }
+
+.icon-nav {
+    width: 30px;
+    margin-left: 3px;
+}
+
+.icon-nav svg {
+    height: 25px;
+}
