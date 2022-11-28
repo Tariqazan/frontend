@@ -758,9 +758,19 @@ body .bui_font_strong {
     margin-right: 20px;
 }
 
+.place-details-point {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+}
+
 @media (max-width:600px) {
     .pricing-card {
         width: 300px;
+    }
+
+    .place-details-point {
+        flex-direction: column;
     }
 }
 
