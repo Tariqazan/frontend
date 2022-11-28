@@ -11,6 +11,7 @@
         integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="./static/lightbox/css/lightbox.css">
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.css" />
 </head>
 
 <body>
@@ -1659,46 +1660,153 @@ https://t-cf.bstatic.com/static/img/flags/new/48-squared/us/fa2b2a0e643c840152ba
                         </a>
                     </div>
                     <div class="col-md-3">
-                        <a href="./media/places/location2.webp" data-lightbox="models" data-title="Captions 2">
+                        <a class="gallery-img" href="./media/places/location2.webp" data-lightbox="models"
+                            data-title="Captions 2">
                             <img src="./media/places/location2.webp">
                         </a>
-                        <a href="./media/places/location3.webp" data-lightbox="models" data-title="Captions 3">
+                        <a class="gallery-img" href="./media/places/location3.webp" data-lightbox="models"
+                            data-title="Captions 3">
                             <img src="./media/places/location3.webp">
                         </a>
                     </div>
                     <div class="col-md-3">
-                        <a href="./media/places/location4.webp" data-lightbox="models" data-title="Captions 4">
+                        <a class="gallery-img top-right-rounded" href="./media/places/location4.webp"
+                            data-lightbox="models" data-title="Captions 4">
                             <img src="./media/places/location4.webp">
                         </a>
-                        <a href="./media/places/location5.webp" data-lightbox="models" data-title="Captions 5">
+                        <a class="gallery-img bottom-right-rounded" href="./media/places/location5.webp"
+                            data-lightbox="models" data-title="Captions 5">
                             <img src="./media/places/location5.webp">
                         </a>
                     </div>
-                    <div class="d-none">
-                        <a href="./media/places/location4.webp" data-lightbox="models" data-title="Captions 4">
-                            <img src="./media/places/location4.webp">
-                        </a>
-                        <a href="./media/places/location5.webp" data-lightbox="models" data-title="Captions 5">
-                            <img src="./media/places/location5.webp">
-                        </a>
-                        <a href="./media/places/location4.webp" data-lightbox="models" data-title="Captions 4">
-                            <img src="./media/places/location4.webp">
-                        </a>
-                        <a href="./media/places/location5.webp" data-lightbox="models" data-title="Captions 5">
-                            <img src="./media/places/location5.webp">
-                        </a>
-                        <a href="./media/places/location4.webp" data-lightbox="models" data-title="Captions 4">
-                            <img src="./media/places/location4.webp">
-                        </a>
-                        <a href="./media/places/location5.webp" data-lightbox="models" data-title="Captions 5">
-                            <img src="./media/places/location5.webp">
-                        </a>
-                        <a href="./media/places/location4.webp" data-lightbox="models" data-title="Captions 4">
-                            <img src="./media/places/location4.webp">
-                        </a>
-                        <a href="./media/places/location5.webp" data-lightbox="models" data-title="Captions 5">
-                            <img src="./media/places/location5.webp">
-                        </a>
+                    <!-- Button trigger modal -->
+                    <button type="button" class="open-gallery_btn" data-bs-toggle="modal" data-bs-target="#gallery">
+                        <svg viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"
+                            role="presentation" focusable="false"
+                            style="display: block; height: 16px; width: 16px; fill: currentcolor;">
+                            <path
+                                d="m3 11.5a1.5 1.5 0 1 1 0 3 1.5 1.5 0 0 1 0-3zm5 0a1.5 1.5 0 1 1 0 3 1.5 1.5 0 0 1 0-3zm5 0a1.5 1.5 0 1 1 0 3 1.5 1.5 0 0 1 0-3zm-10-5a1.5 1.5 0 1 1 0 3 1.5 1.5 0 0 1 0-3zm5 0a1.5 1.5 0 1 1 0 3 1.5 1.5 0 0 1 0-3zm5 0a1.5 1.5 0 1 1 0 3 1.5 1.5 0 0 1 0-3zm-10-5a1.5 1.5 0 1 1 0 3 1.5 1.5 0 0 1 0-3zm5 0a1.5 1.5 0 1 1 0 3 1.5 1.5 0 0 1 0-3zm5 0a1.5 1.5 0 1 1 0 3 1.5 1.5 0 0 1 0-3z"
+                                fill-rule="evenodd"></path>
+                        </svg> <span>See all photos</span>
+                    </button>
+
+                    <!-- Modal -->
+                    <div class="modal fade" id="gallery" tabindex="-1" aria-labelledby="exampleModalLabel"
+                        aria-hidden="true">
+                        <div class="modal-dialog modal-fullscreen">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <div class="social-share">
+                                        <button type="button" class="social-share-btn">
+                                            <svg viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg"
+                                                aria-hidden="true" role="presentation" focusable="false"
+                                                style="display: block; fill: none; height: 16px; width: 16px; stroke: currentcolor; stroke-width: 2; overflow: visible;">
+                                                <g fill="none">
+                                                    <path d="M27 18v9a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2v-9"></path>
+                                                    <path d="M16 3v23V3z"></path>
+                                                    <path d="M6 13l9.293-9.293a1 1 0 0 1 1.414 0L26 13"></path>
+                                                </g>
+                                            </svg> <span>Share</span>
+                                        </button>
+                                        <button type="button" class="social-share-btn">
+                                            <svg viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg"
+                                                aria-hidden="true" role="presentation" focusable="false"
+                                                style="display: block; fill: none; height: 16px; width: 16px; stroke: currentcolor; stroke-width: 2; overflow: visible;">
+                                                <path
+                                                    d="m16 28c7-4.733 14-10 14-17 0-1.792-.683-3.583-2.05-4.95-1.367-1.366-3.158-2.05-4.95-2.05-1.791 0-3.583.684-4.949 2.05l-2.051 2.051-2.05-2.051c-1.367-1.366-3.158-2.05-4.95-2.05-1.791 0-3.583.684-4.949 2.05-1.367 1.367-2.051 3.158-2.051 4.95 0 7 7 12.267 14 17z">
+                                                </path>
+                                            </svg><span>Save</span>
+                                        </button>
+                                    </div>
+                                    <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                        aria-label="Close"></button>
+                                </div>
+                                <div class="modal-body">
+                                    <div class="container text-center">
+                                        <div class="row">
+                                            <div class="col-md-12">
+                                                <a class="gallery-img" href="./media/places/location1.webp"
+                                                    data-lightbox="models" data-title="Captions 1">
+                                                    <img src="./media/places/location1.webp">
+                                                </a>
+                                            </div>
+                                            <div class="col-md-6">
+                                                <a class="gallery-img" href="./media/places/location2.webp"
+                                                    data-lightbox="models" data-title="Captions 2">
+                                                    <img src="./media/places/location2.webp">
+                                                </a>
+                                            </div>
+                                            <div class="col-md-6">
+                                                <a class="gallery-img" href="./media/places/location3.webp"
+                                                    data-lightbox="models" data-title="Captions 3">
+                                                    <img src="./media/places/location3.webp">
+                                                </a>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-md-12">
+                                                <a class="gallery-img" href="./media/places/location4.webp"
+                                                    data-lightbox="models" data-title="Captions 4">
+                                                    <img src="./media/places/location4.webp">
+                                                </a>
+                                            </div>
+                                            <div class="col-md-6">
+                                                <a class="gallery-img" href="./media/places/location5.webp"
+                                                    data-lightbox="models" data-title="Captions 5">
+                                                    <img src="./media/places/location5.webp">
+                                                </a>
+                                            </div>
+                                            <div class="col-md-6">
+                                                <a class="gallery-img" href="./media/places/location1.webp"
+                                                    data-lightbox="models" data-title="Captions 1">
+                                                    <img src="./media/places/location1.webp">
+                                                </a>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-md-12">
+                                                <a class="gallery-img" href="./media/places/location2.webp"
+                                                    data-lightbox="models" data-title="Captions 2">
+                                                    <img src="./media/places/location2.webp">
+                                                </a>
+                                            </div>
+                                            <div class="col-md-6">
+                                                <a class="gallery-img" href="./media/places/location3.webp"
+                                                    data-lightbox="models" data-title="Captions 3">
+                                                    <img src="./media/places/location3.webp">
+                                                </a>
+                                            </div>
+                                            <div class="col-md-6">
+                                                <a class="gallery-img" href="./media/places/location4.webp"
+                                                    data-lightbox="models" data-title="Captions 4">
+                                                    <img src="./media/places/location4.webp">
+                                                </a>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-md-12">
+                                                <a class="gallery-img" href="./media/places/location5.webp"
+                                                    data-lightbox="models" data-title="Captions 5">
+                                                    <img src="./media/places/location5.webp">
+                                                </a>
+                                            </div>
+                                            <div class="col-md-6">
+                                                <a class="gallery-img" href="./media/places/location1.webp"
+                                                    data-lightbox="models" data-title="Captions 1">
+                                                    <img src="./media/places/location1.webp">
+                                                </a>
+                                            </div>
+                                            <div class="col-md-6">
+                                                <a class="gallery-img" href="./media/places/location2.webp"
+                                                    data-lightbox="models" data-title="Captions 2">
+                                                    <img src="./media/places/location2.webp">
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -1784,22 +1892,20 @@ https://t-cf.bstatic.com/static/img/flags/new/48-squared/us/fa2b2a0e643c840152ba
                                 <i class="fa-solid fa-star"></i>
                                 <span>5.0</span>
                                 <span>.</span>
-                                <a href="#">22 reviews</a>
+                                <a href="#" class="text-muted">22 reviews</a>
                             </div>
                         </div>
                         <div class="checking-date">
-                            <div class="check_in-date">
-                                <label for="">Check in</label>
-                                <input type="date" class="form-control">
+                            <div class="border px-3 py-2 w-50">
+                                <p class="fw-bold p-0 mb-0">CHECK-IN</p> <span class="text-muted">Add Date</span>
                             </div>
-                            <div class="check_out-date">
-                                <label for="">Check out</label>
-                                <input type="date" class="form-control">
+                            <div class="border px-3 py-2 w-50">
+                                <p class="fw-bold p-0 mb-0">CHECKOUT</p><span class="text-muted">Add Date</span>
                             </div>
                         </div>
                         <div class="guests">
                             <div class="dropdown">
-                                <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown"
+                                <button class="btn dropdown-toggle py-2" type="button" data-bs-toggle="dropdown"
                                     aria-expanded="false">
                                     Guests
                                 </button>
@@ -2903,6 +3009,10 @@ https://t-cf.bstatic.com/static/img/flags/new/48-squared/us/fa2b2a0e643c840152ba
         integrity="sha384-cuYeSxntonz0PPNlHhBs68uyIAVpIIOZZ5JqeqvYYIcEL727kskC66kF92t6Xl2V"
         crossorigin="anonymous"></script>
     <script src="./static/lightbox/js/lightbox-plus-jquery.min.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/jquery/latest/jquery.min.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/momentjs/latest/moment.min.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.min.js"></script>
+    <script src="./js/daterangepicker.js"></script>
 </body>
 
 </html>

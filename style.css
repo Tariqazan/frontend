@@ -298,6 +298,10 @@
     --DO_NOT_USE_bui_large_font_emphasized_2_font-family: BlinkMacSystemFont, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif;
 }
 
+main {
+    font-family: Circular, -apple-system, BlinkMacSystemFont, Roboto, Helvetica Neue, sans-serif !important;
+}
+
 .navigation {
     background-color: transparent !important;
     padding: 15px 0;
@@ -327,6 +331,14 @@
     object-fit: cover;
     width: 100%;
     z-index: -2;
+}
+
+@media (min-width:1400px) {
+
+    .bg-video,
+    .bg-overlay {
+        height: 500px;
+    }
 }
 
 @media (max-width:600px) {
@@ -468,7 +480,7 @@ body .bui_font_strong {
 }
 
 .banner {
-    margin: 50px 0;
+    margin: 30px 0;
 }
 
 .banner-content {
@@ -564,7 +576,8 @@ body .bui_font_strong {
 
 .place-title {
     font-size: 26px;
-    font-weight: 600;
+    font-weight: 500;
+    width: 400px;
     line-height: 30px;
 }
 
@@ -578,6 +591,10 @@ body .bui_font_strong {
 @media (max-width: 600px) {
     .place-details {
         flex-direction: column;
+    }
+
+    .place-title {
+        width: 150px;
     }
 }
 
@@ -616,23 +633,64 @@ body .bui_font_strong {
 
 .social-share-btn span {
     text-decoration: underline;
+    font-weight: 500;
 }
 
 .gallery {
+    position: relative;
     width: 100%;
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     grid-gap: 30px;
 }
 
-.gallery img {
+.gallery-img {
     width: 100%;
-    height: 195px;
+}
+
+.gallery-img img {
+    object-fit: cover;
+    width: 100%;
+    height: 200px;
     margin: 5px 0;
 }
 
+.gallery_large-img {
+    width: 100%;
+}
+
 .gallery_large-img img {
-    height: 400px !important;
+    border-bottom-left-radius: 10px;
+    border-top-left-radius: 10px;
+    margin: 5px 0;
+    width: 100%;
+    height: 410px;
+}
+
+.top-right-rounded img {
+    border-top-right-radius: 10px;
+}
+
+.bottom-right-rounded img {
+    border-bottom-right-radius: 10px;
+}
+
+.open-gallery_btn {
+    font-size: 16px;
+    display: flex;
+    bottom: 20px;
+    width: 170px !important;
+    position: absolute;
+    padding: 5px 10px;
+    background-color: #f7f7f7;
+    font-weight: 500;
+    right: 40px;
+    border-radius: 10px;
+}
+
+.open-gallery_btn svg {
+    margin-top: 5px;
+    margin-right: 5px;
 }
 
 .place-icon {
@@ -663,6 +721,7 @@ body .bui_font_strong {
     font-weight: 300;
 }
 
+
 .pricing-card {
     width: 400px;
     margin: auto;
@@ -689,18 +748,14 @@ body .bui_font_strong {
 }
 
 .checking-date {
-    width: 100%;
+    display: flex;
+    font-size: 14px;
 }
 
-.check_in-date,
-.check_out-date {
-    border: 1px solid rgba(128, 128, 128, 0.332);
-    padding: 10px 5px;
-}
-
-.check_in-date label,
-.check_out-date label {
-    font-size: 12px;
+.booking_date-label {
+    width: 50%;
+    padding: 10px 20px;
+    font-weight: 500;
 }
 
 .guests {
