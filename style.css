@@ -758,6 +758,12 @@ body .bui_font_strong {
     margin-right: 20px;
 }
 
+@media (max-width:600px) {
+    .pricing-card {
+        width: 100%;
+    }
+}
+
 footer .footer {
     width: 100%;
     background: #F7FAFC;
