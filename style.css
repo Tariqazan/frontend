@@ -566,7 +566,6 @@ body .bui_font_strong {
     font-size: 26px;
     font-weight: 600;
     line-height: 30px;
-    white-space: nowrap;
 }
 
 .place-details {
@@ -687,6 +686,10 @@ body .bui_font_strong {
     margin-left: 10px;
     font-size: 15px;
     font-weight: 400;
+}
+
+.checking-date {
+    width: 100%;
 }
 
 .check_in-date,
