@@ -760,7 +760,7 @@ body .bui_font_strong {
 
 @media (max-width:600px) {
     .pricing-card {
-        width: 100%;
+        width: 200px;
     }
 }
 
