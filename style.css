@@ -877,6 +877,14 @@ body .bui_font_strong {
     display: block;
 }
 
+.things_to_know {
+    display: block;
+}
+
+.things_to_know-responsive {
+    display: none;
+}
+
 @media (max-width:600px) {
     .review-responsive {
         display: flex;
@@ -885,6 +893,14 @@ body .bui_font_strong {
     }
 
     .review {
+        display: none;
+    }
+
+    .things_to_know-responsive {
+        display: block;
+    }
+
+    .things_to_know {
         display: none;
     }
 }
