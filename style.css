@@ -752,10 +752,32 @@ body .bui_font_strong {
     top: 0;
     right: 392px;
 }
+
 @media (max-width:1400px) {
-.sticky {
-    right: 150px;
+    .sticky {
+        right: 150px;
+    }
 }
+
+.responsive-pricing {
+    display: none;
+}
+
+@media (max-width:600px) {
+    .responsive-pricing {
+        border-top: 1px solid #ccc;
+        font-size: 16px !important;
+        z-index: 100;
+        display: flex;
+        justify-content: space-around;
+        position: fixed;
+        background-color: white;
+        bottom: 0;
+    }
+
+    .reserve-responsive_btn {
+        width: 50%;
+    }
 }
 
 .pricing-card {
@@ -820,6 +842,7 @@ body .bui_font_strong {
 .check-availibility_btn {
     color: white;
     font-size: 16px;
+    border-radius: 10px;
     font-weight: 600;
     border: none;
     width: 100%;
@@ -1086,6 +1109,14 @@ form.sign-up {
     width: 100%;
     display: flex;
     margin-top: 15px;
+}
+
+.partner-logo {
+    width: 100%;
+}
+
+.partner-logo img {
+    width: 100%;
 }
 
 .footer-links {
