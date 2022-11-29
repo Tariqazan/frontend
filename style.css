@@ -989,6 +989,15 @@ main {
     }
 }
 
+.lb-number {
+    position: absolute;
+    bottom: 61px;
+    color: white !important;
+    font-size: 16px !important;
+    font-weight: 600 !important;
+    right: 25% !important;
+}
+
 .lb-dataContainer {
     width: 750px !important;
 }
@@ -1017,7 +1026,8 @@ main {
 
 .lb-caption {
     color: black;
-    font-size: 15px;
+    font-size: 18px !important;
+    font-weight: 600 !important;
 }
 
 .logo {
