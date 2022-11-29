@@ -768,7 +768,7 @@ body .bui_font_strong {
     .responsive-pricing {
         display: flex;
         justify-content: space-around;
-        position: sticky;
+        position: fixed;
         bottom: 0;
     }
 }
