@@ -593,7 +593,8 @@ body .bui_font_strong {
     }
 
     .place-title {
-        width: 150px;
+        width: 100%;
+        font-size: 15px;
     }
 }
 
@@ -636,6 +637,7 @@ body .bui_font_strong {
 }
 
 .gallery {
+    display: block;
     position: relative;
     width: 100%;
     display: grid;
@@ -690,6 +692,25 @@ body .bui_font_strong {
 .open-gallery_btn svg {
     margin-top: 5px;
     margin-right: 5px;
+}
+
+.gallery-responsive {
+    display: none;
+}
+
+@media (max-width:600px) {
+    .fixed-card {
+        position: relative;
+        z-index: 0;
+    }
+
+    .gallery {
+        display: none;
+    }
+
+    .gallery-responsive {
+        display: block;
+    }
 }
 
 .place-icon {

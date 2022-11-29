@@ -1811,6 +1811,61 @@ https://t-cf.bstatic.com/static/img/flags/new/48-squared/us/fa2b2a0e643c840152ba
                     </div>
                 </div>
             </div>
+            <div class="gallery-responsive">
+                <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
+                    <div class="carousel-inner">
+                        <div class="carousel-item active">
+                            <img src="./media/places/location1.webp" class="d-block w-100" alt="...">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="./media/places/location2.webp" class="d-block w-100" alt="...">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="./media/places/location3.webp" class="d-block w-100" alt="...">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="./media/places/location2.webp" class="d-block w-100" alt="...">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="./media/places/location3.webp" class="d-block w-100" alt="...">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="./media/places/location2.webp" class="d-block w-100" alt="...">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="./media/places/location3.webp" class="d-block w-100" alt="...">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="./media/places/location2.webp" class="d-block w-100" alt="...">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="./media/places/location3.webp" class="d-block w-100" alt="...">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="./media/places/location2.webp" class="d-block w-100" alt="...">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="./media/places/location3.webp" class="d-block w-100" alt="...">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="./media/places/location2.webp" class="d-block w-100" alt="...">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="./media/places/location3.webp" class="d-block w-100" alt="...">
+                        </div>
+                    </div>
+                    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls"
+                        data-bs-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Previous</span>
+                    </button>
+                    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls"
+                        data-bs-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Next</span>
+                    </button>
+                </div>
+            </div>
             <div class="row my-5">
                 <div class="col-md-6">
                     <div class="place-details-point">
@@ -1884,97 +1939,97 @@ https://t-cf.bstatic.com/static/img/flags/new/48-squared/us/fa2b2a0e643c840152ba
                     <hr>
                 </div>
                 <div class="col-md-6">
-                   <div class="fixed-card">
-                    <div class="pricing-card">
-                        <div class="d-flex justify-content-between">
-                            <div class="price">
-                                <p>$310</p> <span>night</span>
+                    <div class="fixed-card">
+                        <div class="pricing-card">
+                            <div class="d-flex justify-content-between">
+                                <div class="price">
+                                    <p>$310</p> <span>night</span>
+                                </div>
+                                <div class="place-info">
+                                    <i class="fa-solid fa-star"></i>
+                                    <span>5.0</span>
+                                    <span>.</span>
+                                    <a href="#" class="text-muted">22 reviews</a>
+                                </div>
                             </div>
-                            <div class="place-info">
-                                <i class="fa-solid fa-star"></i>
-                                <span>5.0</span>
-                                <span>.</span>
-                                <a href="#" class="text-muted">22 reviews</a>
+                            <div class="checking-date" id='checking-date_close'>
+                                <div class="border px-3 py-2 w-50">
+                                    <p class="fw-bold p-0 mb-0">CHECK-IN</p> <span class="text-muted">Add Date</span>
+                                </div>
+                                <div class="border px-3 py-2 w-50">
+                                    <p class="fw-bold p-0 mb-0">CHECKOUT</p><span class="text-muted">Add Date</span>
+                                </div>
+                                <input id='datepicker_calender-closed' placeholder="mm/dd/yy to mm/dd/yy"
+                                    style='font-size: 14pt; width: 20em;' hidden />
                             </div>
-                        </div>
-                        <div class="checking-date" id='checking-date_close'>
-                            <div class="border px-3 py-2 w-50">
-                                <p class="fw-bold p-0 mb-0">CHECK-IN</p> <span class="text-muted">Add Date</span>
+                            <div id='datepicker_calender' class="date-picker"></div>
+                            <div class="guests">
+                                <div class="dropdown">
+                                    <button class="btn dropdown-toggle py-2" type="button" data-bs-toggle="dropdown"
+                                        aria-expanded="false">
+                                        Guests
+                                    </button>
+                                    <ul class="dropdown-menu">
+                                        <li>
+                                            <div class="dropdown-item-text d-flex justify-content-between">
+                                                <div class="guest-info">
+                                                    <p class="fw-bold mb-0">Adults</p>
+                                                    <span>Age 13+</span>
+                                                </div>
+                                                <div class="number_of-guest">
+                                                    <span class="me-2">+</span>
+                                                    <span id="guest-number">0</span>
+                                                    <span class="ms-2">-</span>
+                                                </div>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <div class="dropdown-item-text d-flex justify-content-between">
+                                                <div class="guest-info">
+                                                    <p class="fw-bold mb-0">Children</p>
+                                                    <span>under 2-12</span>
+                                                </div>
+                                                <div class="number_of-guest">
+                                                    <span class="me-2">+</span>
+                                                    <span id="guest-number">0</span>
+                                                    <span class="ms-2">-</span>
+                                                </div>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <div class="dropdown-item-text d-flex justify-content-between">
+                                                <div class="guest-info">
+                                                    <p class="fw-bold mb-0">Infants</p>
+                                                    <span>under 2</span>
+                                                </div>
+                                                <div class="number_of-guest">
+                                                    <span class="me-2">+</span>
+                                                    <span id="guest-number">0</span>
+                                                    <span class="ms-2">-</span>
+                                                </div>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <div class="dropdown-item-text d-flex justify-content-between">
+                                                <div class="guest-info">
+                                                    <p class="fw-bold mb-0">pets</p>
+                                                    <a href="#" class="text-dark">Bringing a service animal?</a>
+                                                </div>
+                                                <div class="number_of-guest">
+                                                    <span class="me-2">+</span>
+                                                    <span id="guest-number">0</span>
+                                                    <span class="ms-2">-</span>
+                                                </div>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </div>
                             </div>
-                            <div class="border px-3 py-2 w-50">
-                                <p class="fw-bold p-0 mb-0">CHECKOUT</p><span class="text-muted">Add Date</span>
+                            <div class="w-100">
+                                <button class="check-availibility_btn">Check Availibity</button>
                             </div>
-                            <input id='datepicker_calender-closed' placeholder="mm/dd/yy to mm/dd/yy"
-                                style='font-size: 14pt; width: 20em;' hidden />
-                        </div>
-                        <div id='datepicker_calender' class="date-picker"></div>
-                        <div class="guests">
-                            <div class="dropdown">
-                                <button class="btn dropdown-toggle py-2" type="button" data-bs-toggle="dropdown"
-                                    aria-expanded="false">
-                                    Guests
-                                </button>
-                                <ul class="dropdown-menu">
-                                    <li>
-                                        <div class="dropdown-item-text d-flex justify-content-between">
-                                            <div class="guest-info">
-                                                <p class="fw-bold mb-0">Adults</p>
-                                                <span>Age 13+</span>
-                                            </div>
-                                            <div class="number_of-guest">
-                                                <span class="me-2">+</span>
-                                                <span id="guest-number">0</span>
-                                                <span class="ms-2">-</span>
-                                            </div>
-                                        </div>
-                                    </li>
-                                    <li>
-                                        <div class="dropdown-item-text d-flex justify-content-between">
-                                            <div class="guest-info">
-                                                <p class="fw-bold mb-0">Children</p>
-                                                <span>under 2-12</span>
-                                            </div>
-                                            <div class="number_of-guest">
-                                                <span class="me-2">+</span>
-                                                <span id="guest-number">0</span>
-                                                <span class="ms-2">-</span>
-                                            </div>
-                                        </div>
-                                    </li>
-                                    <li>
-                                        <div class="dropdown-item-text d-flex justify-content-between">
-                                            <div class="guest-info">
-                                                <p class="fw-bold mb-0">Infants</p>
-                                                <span>under 2</span>
-                                            </div>
-                                            <div class="number_of-guest">
-                                                <span class="me-2">+</span>
-                                                <span id="guest-number">0</span>
-                                                <span class="ms-2">-</span>
-                                            </div>
-                                        </div>
-                                    </li>
-                                    <li>
-                                        <div class="dropdown-item-text d-flex justify-content-between">
-                                            <div class="guest-info">
-                                                <p class="fw-bold mb-0">pets</p>
-                                                <a href="#" class="text-dark">Bringing a service animal?</a>
-                                            </div>
-                                            <div class="number_of-guest">
-                                                <span class="me-2">+</span>
-                                                <span id="guest-number">0</span>
-                                                <span class="ms-2">-</span>
-                                            </div>
-                                        </div>
-                                    </li>
-                                </ul>
-                            </div>
-                        </div>
-                        <div class="w-100">
-                            <button class="check-availibility_btn">Check Availibity</button>
                         </div>
                     </div>
-                   </div>
                 </div>
             </div>
             <div class="booking-info">
