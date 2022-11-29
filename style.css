@@ -719,6 +719,8 @@ body .bui_font_strong {
 
 .place-icon img {
     width: 80px;
+    height: 80px;
+    border-radius: 50%;
 }
 
 .place-description {
@@ -748,7 +750,12 @@ body .bui_font_strong {
 .sticky {
     position: fixed;
     top: 0;
-    right: 100px;
+    right: 392px;
+}
+@media (max-width:1400px) {
+.sticky {
+    right: 150px;
+}
 }
 
 .pricing-card {
@@ -827,6 +834,14 @@ body .bui_font_strong {
     color: black;
     text-decoration: none;
     font-weight: 600;
+}
+
+.ratings {
+    display: block;
+}
+
+.ratings-responsive {
+    display: none;
 }
 
 .progress {
