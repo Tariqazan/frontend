@@ -770,6 +770,7 @@ body .bui_font_strong {
         justify-content: space-around;
         position: fixed;
         bottom: 0;
+        z-index: 1111;
     }
 }
 
@@ -867,8 +868,25 @@ body .bui_font_strong {
     display: block;
 }
 
-.ratings-responsive {
+.review-responsive {
     display: none;
+    width: 100%;
+}
+
+.review {
+    display: block;
+}
+
+@media (max-width:600px) {
+    .review-responsive {
+        display: flex;
+        justify-content: space-between;
+        overflow-x: scroll;
+    }
+
+    .review {
+        display: none;
+    }
 }
 
 .progress {
