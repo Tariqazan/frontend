@@ -624,6 +624,13 @@ body .bui_font_strong {
     margin: 0 5px 0 0;
     background-color: transparent;
     border: none;
+    padding: 10px;
+    font-size: 15px;
+}
+
+.social-share-btn:hover {
+    border-radius: 10px;
+    background-color: rgba(204, 204, 204, 0.246);
 }
 
 .social-share-btn svg {
