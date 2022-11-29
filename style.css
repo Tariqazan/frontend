@@ -854,6 +854,12 @@ body .bui_font_strong {
         width: 300px;
     }
 
+    .sticky {
+        position: relative;
+        margin: auto;
+        right: 0;
+    }
+
     .place-details-point {
         flex-direction: column;
     }
@@ -880,6 +886,7 @@ body .bui_font_strong {
 
 .date-picker {
     position: absolute;
+    width: 100%;
 }
 
 .date-picker-wrapper {
@@ -889,6 +896,7 @@ body .bui_font_strong {
 
 .date-picker-wrapper .month-wrapper {
     border: none !important;
+    width: 100%;
 }
 
 .date-picker-wrapper .month-name {
