@@ -11,7 +11,8 @@
         integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="./static/lightbox/css/lightbox.css">
-    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.css" />
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/jquery-date-range-picker/0.14.2/daterangepicker.min.css">
 </head>
 
 <body>
@@ -1883,6 +1884,7 @@ https://t-cf.bstatic.com/static/img/flags/new/48-squared/us/fa2b2a0e643c840152ba
                     <hr>
                 </div>
                 <div class="col-md-6">
+                   <div class="fixed-card">
                     <div class="pricing-card">
                         <div class="d-flex justify-content-between">
                             <div class="price">
@@ -1895,14 +1897,17 @@ https://t-cf.bstatic.com/static/img/flags/new/48-squared/us/fa2b2a0e643c840152ba
                                 <a href="#" class="text-muted">22 reviews</a>
                             </div>
                         </div>
-                        <div class="checking-date">
+                        <div class="checking-date" id='checking-date_close'>
                             <div class="border px-3 py-2 w-50">
                                 <p class="fw-bold p-0 mb-0">CHECK-IN</p> <span class="text-muted">Add Date</span>
                             </div>
                             <div class="border px-3 py-2 w-50">
                                 <p class="fw-bold p-0 mb-0">CHECKOUT</p><span class="text-muted">Add Date</span>
                             </div>
+                            <input id='datepicker_calender-closed' placeholder="mm/dd/yy to mm/dd/yy"
+                                style='font-size: 14pt; width: 20em;' hidden />
                         </div>
+                        <div id='datepicker_calender' class="date-picker"></div>
                         <div class="guests">
                             <div class="dropdown">
                                 <button class="btn dropdown-toggle py-2" type="button" data-bs-toggle="dropdown"
@@ -1969,10 +1974,237 @@ https://t-cf.bstatic.com/static/img/flags/new/48-squared/us/fa2b2a0e643c840152ba
                             <button class="check-availibility_btn">Check Availibity</button>
                         </div>
                     </div>
+                   </div>
                 </div>
             </div>
-            <hr>
-            <div class="amentities my-5">
+            <div class="booking-info">
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="logo">
+                            <img src="./media/logo.webp" alt="">
+                        </div>
+                        <p>Every booking includes free protection from Host cancellations, listing inaccuracies, and
+                            other
+                            issues like trouble checking in.</p>
+                        <!-- Button trigger modal -->
+                        <a type="button" class="text-dark" data-bs-toggle="modal" data-bs-target="#booking-info">
+                            Learn More
+                        </a>
+
+                        <!-- Modal -->
+                        <div class="modal fade" id="booking-info" tabindex="-1" aria-labelledby="exampleModalLabel"
+                            aria-hidden="true">
+                            <div class="modal-dialog modal-lg">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <div class="booking-info_header">
+                                            <div class="logo">
+                                                <img src="./media/logo.webp" alt="">
+                                            </div>
+                                            <p>AirCover is comprehensive protection included for free with every
+                                                booking.</p>
+                                        </div>
+                                        <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                            aria-label="Close"></button>
+                                    </div>
+                                    <div class="modal-body booking-info_details">
+                                        <div class="row">
+                                            <div class="col-md-6 mb-3">
+                                                <p class="fw-bold">Booking Protection Guarantee</p>
+                                                <span class="text-muted">In the unlikely event a Host needs to cancel
+                                                    your booking within 30 days of check-in, we’ll find you a similar or
+                                                    better home, or we’ll refund you.</span>
+                                            </div>
+                                            <div class="col-md-6 mb-3">
+                                                <p class="fw-bold">Check-In Guarantee</p>
+                                                <span class="text-muted">If you can’t check into your home and the Host
+                                                    cannot resolve the issue, we’ll find you a similar or better home
+                                                    for the length of your original stay, or we’ll refund you.</span>
+                                            </div>
+                                            <div class="col-md-6 mb-3">
+                                                <p class="fw-bold">Get-What-You-Booked Guarantee</p>
+                                                <span class="text-muted">If at any time during your stay you find your
+                                                    listing isn't as advertised—for example, the refrigerator stops
+                                                    working and your Host can’t easily fix it, or it has fewer bedrooms
+                                                    than listed—you'll have three days to report it and we’ll find you a
+                                                    similar or better home, or we’ll refund you.</span>
+                                            </div>
+                                            <div class="col-md-6 mb-3">
+                                                <p class="fw-bold">24-hour Safety Line</p>
+                                                <span class="text-muted">If you ever feel unsafe, you’ll get priority
+                                                    access to specially-trained safety agents, day or night.</span>
+                                            </div>
+                                        </div>
+                                        <p class="my-3">Find complete details on how AirCover protects your booking in
+                                            our <a href="#" class="fw-bold text-dark">Help Center</a></p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <hr>
+                    </div>
+                </div>
+            </div>
+            <div class="about">
+                <div class="row">
+                    <div class="col-md-6">
+                        <p class="about">
+                            Perched high on an ocean hillside, built on 30 ft tall steel legs, the cozy quarters above
+                            are akin
+                            to an old ship’s cabin. With 360 views at 30ft up you can chart the sun and stars across the
+                            sky,
+                            set your rhythm to the ebb & flow of the tide and scout the surf from above. Greet the
+                            evenings with
+                            a cozy woodstove, sunset with drinks on the deck, moonrise with a dip in the hottub &
+                            mornings with
+                            fresh espresso. Permit yourself to depart land for a while and come stand watch at The
+                            Tower.
+                        </p>
+                        <!-- Button trigger modal -->
+                        <a type="button" class="text-dark" data-bs-toggle="modal" data-bs-target="#about">
+                            Show more
+                        </a>
+
+                        <!-- Modal -->
+                        <div class="modal fade" id="about" tabindex="-1" aria-labelledby="exampleModalLabel"
+                            aria-hidden="true">
+                            <div class="modal-dialog modal-lg modal-dialog-scrollable">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <h1 class="modal-title fs-3 fw-bold" id="exampleModalLabel">About this space
+                                        </h1>
+                                        <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                            aria-label="Close"></button>
+                                    </div>
+                                    <div class="modal-body">
+                                        <p>Perched high on an ocean hillside, built on 30 ft tall steel legs, the cozy
+                                            quarters
+                                            above are akin to an old ship’s cabin. With 360 views at 30ft up you can
+                                            chart the
+                                            sun and stars across the sky, set your rhythm to the ebb & flow of the tide
+                                            and
+                                            scout the surf from above. Greet the evenings with a cozy woodstove, sunset
+                                            with
+                                            drinks on the deck, moonrise with a dip in the hottub & mornings with fresh
+                                            espresso. Permit yourself to depart land for a while and come stand watch at
+                                            The
+                                            Tower.</p>
+                                        <p class="fw-bold">The space</p>
+                                        <p class="about-details_full">
+                                            The Tower is one of our three Shackup properties. We have the Aframe, The
+                                            Tower and
+                                            The Cabin. You can see our full lineup at airbnb.com/p/shackup
+
+                                            <br>
+                                            <br>
+                                            The tower is an adventure, but we dare say the most comfortable adventure
+                                            you've
+                                            ever been on. We built this place to give you all the creature comforts
+                                            while you
+                                            get lost in the vastness of the surrounding sea.
+
+                                            <br>
+                                            <br>
+                                            Floating above the ocean yet tethered to the ground on large steel legs.
+                                            This place
+                                            will pick you up and let you sink into nature, a good book, a hot tub soak,
+                                            a hearty
+                                            cooked meal, and relax into yourself and each other.
+                                            <br>
+                                            <br>
+                                            ----
+                                            <br>
+                                            <br>
+                                            Here are a few details you'll want to know:
+
+                                            <br>
+                                            <br>
+                                            Hot Tub: The private hot tub is tucked in to the east facing alcove,
+                                            oriented to
+                                            watch the moon rise and the sunrise, and oversee looking the bluff of Cape
+                                            La Have
+                                            and the other La Have Islands. It's the perfect size for two and will be hot
+                                            when
+                                            you arrive.
+
+                                            <br>
+                                            <br>
+                                            Woodstove: Cozy up on the custom built couches in front of the fire, the
+                                            wood stove
+                                            provides the perfect warmth to the place and everything you need for it is
+                                            provided.
+
+                                            <br>
+                                            <br>
+                                            Kitchen: the kitchen is small but well equipped. It has a gas range and oven
+                                            and all
+                                            the things you need to cook a hearty meal.
+
+                                            <br>
+                                            <br>
+                                            Coffee: the Tower has a Breville espresso maker
+                                            If espresso isn't your thing, we offer a stove top maker and a French press.
+                                            Coffee for all is provided.
+
+                                            <br>
+                                            <br>
+                                            Bathroom: located 30ft up, the small bathroom has everything you need
+                                            including a
+                                            small shower.
+
+                                            <br>
+                                            <br>
+                                            Bed: a queen bunk is ready for you, with views of little harbour and the
+                                            ocean
+                                            beyond.
+
+                                            <br>
+                                            <br>
+                                            Decks: the Tower is surround by decks, 360 degrees and offers two tucked in
+                                            alcoves,
+                                            one facing the west and one the east.
+
+                                            <br>
+                                            <br>
+                                            Entertainment: we offer a curated tape collection, blue tooth speaker, board
+                                            games
+                                            and books (there is wifi) Plus the hot tub, views, and wood stove. You'll
+                                            have lots
+                                            to enjoy!
+
+                                            <br>
+                                            <br>
+                                            The 30ft up part: the Tower is built on legs standing 30ft above the ground.
+                                            The
+                                            trek up includes 4 sets of stairs. The stairs are a comfortable gate but you
+                                            might
+                                            want to pack accordingly.
+
+                                            <br>
+                                            <br>
+                                            Pets: the Tower, due to it's nature, is not pet friendly. Please message if
+                                            you have
+                                            a special circumstance.
+                                            <br>
+                                            <br>
+                                            <span class="fw-bold">Guest access</span>
+                                            <br>
+                                            the place is wonderfully private!
+                                            <br>
+                                            <br>
+                                            <span class="fw-bold">License number</span>
+                                            <br>
+                                            18333020750
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <hr>
+                    </div>
+                </div>
+            </div>
+            <div class="amentities">
                 <div class="row">
                     <div class="col-md-6">
                         <h1 class="place-title mb-3">What this place offers</h1>
@@ -2388,10 +2620,22 @@ https://t-cf.bstatic.com/static/img/flags/new/48-squared/us/fa2b2a0e643c840152ba
                                 </div>
                             </div>
                         </div>
+                        <hr>
                     </div>
                 </div>
             </div>
-            <hr>
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="place-title">Select check-in date</div>
+                    <span>Add your travel dates for exact pricing</span>
+                    <div class="checking-date_open" id="checking-date_open">
+                        <input id='datepicker_calender-open_input' placeholder="mm/dd/yy to mm/dd/yy"
+                            style='font-size: 14pt; width: 20em;' hidden />
+                        <div id="datepicker_calender-open"></div>
+                    </div>
+                    <hr>
+                </div>
+            </div>
             <div class="reviews my-5">
                 <div class="review-info">
                     <i class="fa-solid fa-star"></i>
@@ -3009,10 +3253,12 @@ https://t-cf.bstatic.com/static/img/flags/new/48-squared/us/fa2b2a0e643c840152ba
         integrity="sha384-cuYeSxntonz0PPNlHhBs68uyIAVpIIOZZ5JqeqvYYIcEL727kskC66kF92t6Xl2V"
         crossorigin="anonymous"></script>
     <script src="./static/lightbox/js/lightbox-plus-jquery.min.js"></script>
-    <script type="text/javascript" src="https://cdn.jsdelivr.net/jquery/latest/jquery.min.js"></script>
-    <script type="text/javascript" src="https://cdn.jsdelivr.net/momentjs/latest/moment.min.js"></script>
-    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.min.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.16.0/moment.min.js"></script>
+    <script type="text/javascript"
+        src="https://cdnjs.cloudflare.com/ajax/libs/jquery-date-range-picker/0.14.2/jquery.daterangepicker.min.js"></script>
     <script src="./js/daterangepicker.js"></script>
+    <script src="./js/stickycard.js"></script>
 </body>
 
 </html>
