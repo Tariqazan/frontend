@@ -593,8 +593,8 @@ body .bui_font_strong {
     }
 
     .place-title {
-        width: 100%;
-        font-size: 15px;
+        max-width: 70%;
+        font-size: 18px;
     }
 }
 
@@ -887,9 +887,43 @@ body .bui_font_strong {
     flex-direction: row;
 }
 
+main {
+    position: relative;
+}
+
+.main-nav {
+    display: none;
+    width: 100%;
+    padding: 20px;
+    background-color: white;
+    border-bottom: 1px solid #ccc;
+}
+
+.main-nav a {
+    color: black;
+    font-size: 15px;
+    font-weight: 600;
+    margin: 0 20px;
+    text-decoration: none;
+}
+
+.visible {
+    display: block;
+}
+
+.sticky-header {
+    z-index: 2222;
+    position: fixed;
+    top: 0;
+}
+
 @media (max-width:600px) {
     .pricing-card {
         width: 300px;
+    }
+
+    .visible {
+        display: none;
     }
 
     .sticky {
@@ -898,9 +932,41 @@ body .bui_font_strong {
         right: 0;
     }
 
-    .place-details-point {
-        flex-direction: column;
+    .place-icon {
+        width: 20%;
     }
+
+    .place-icon img {
+        width: 50px;
+        height: 50px;
+    }
+}
+
+.lb-data .lb-details {
+    width: 100% !important;
+}
+
+.lb-close {
+    position: absolute;
+    top: 0;
+    right: 100px;
+}
+
+@media (max-width:600px) {
+    .lb-close {
+        top: -30px;
+        right: 15px;
+    }
+}
+
+.lb-details {
+    background-color: white;
+    padding: 20px 10px;
+}
+
+.lb-caption {
+    color: black;
+    font-size: 15px;
 }
 
 .logo {
