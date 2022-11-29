@@ -757,7 +757,7 @@ body .bui_font_strong {
 .sticky {
     position: fixed;
     top: 120px;
-    right: 160px;
+    right: 170px;
 }
 
 
@@ -765,6 +765,12 @@ body .bui_font_strong {
     display: none;
     background-color: rgb(255, 255, 255);
     border-top: 1px solid rgb(221, 221, 221);
+}
+
+@media (min-width:1400px) {
+    .sticky {
+        right: 450px;
+    }
 }
 
 @media (max-width:600px) {
@@ -783,8 +789,8 @@ body .bui_font_strong {
 
 .pricing-card {
     z-index: 5;
-    width: 450px;
-    margin: auto;
+    width: 350px;
+    margin: 0 auto;
     border: 1px solid rgb(221, 221, 221);
     border-radius: 12px;
     padding: 20px;
