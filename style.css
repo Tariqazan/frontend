@@ -896,7 +896,7 @@ body .bui_font_strong {
 
 .date-picker-wrapper .month-wrapper {
     border: none !important;
-    width: 100%;
+    width: 100% !important;
 }
 
 .date-picker-wrapper .month-name {
