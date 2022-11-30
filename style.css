@@ -782,7 +782,7 @@ body .bui_font_strong {
 .sticky {
     position: fixed;
     top: 120px;
-    right: 170px;
+    right: 210px;
 }
 
 
@@ -814,7 +814,7 @@ body .bui_font_strong {
 
 .pricing-card {
     z-index: 5;
-    width: 350px;
+    width: 400px;
     margin: 0 auto;
     border: 1px solid rgb(221, 221, 221);
     border-radius: 12px;
