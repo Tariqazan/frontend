@@ -663,6 +663,7 @@ body .bui_font_strong {
     height: 145px;
     opacity: 0.9;
     margin: 5px 0;
+    transition: 0.3s ease-in;
 }
 
 .gallery_large-img {
@@ -678,6 +679,7 @@ body .bui_font_strong {
     width: 100%;
     opacity: 0.9;
     height: 300px;
+    transition: 0.3s ease-in;
 }
 
 .gallery-img img:hover,
@@ -782,7 +784,6 @@ body .bui_font_strong {
 .sticky {
     position: fixed;
     top: 120px;
-    right: 210px;
 }
 
 
@@ -812,10 +813,15 @@ body .bui_font_strong {
     }
 }
 
+.modal-backdrop {
+    background-color: transparent !important;
+    z-index: -22222222222222222222222222222 !important;
+}
+
 .pricing-card {
     z-index: 5;
     width: 400px;
-    margin: 0 auto;
+    margin: 0 50px;
     border: 1px solid rgb(221, 221, 221);
     border-radius: 12px;
     padding: 20px;
