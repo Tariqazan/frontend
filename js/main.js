@@ -1,0 +1,2 @@
+
+$("#gallery").modal({ backdrop: false });

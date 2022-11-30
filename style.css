@@ -822,6 +822,11 @@ body .bui_font_strong {
     box-shadow: rgb(0 0 0 / 12%) 0px 6px 16px;
 }
 
+.date-picker-wrapper .month-wrapper table td,
+.date-picker-wrapper .month-wrapper table th {
+    height: 50px;
+}
+
 .price {
     display: flex;
 }
