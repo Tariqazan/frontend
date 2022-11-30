@@ -871,6 +871,7 @@ body .bui_font_strong {
     height: 20px;
 }
 
+
 .check-availibility_btn {
     cursor: pointer;
     display: inline-block;
@@ -892,6 +893,11 @@ body .bui_font_strong {
     border: none;
     background: var(--dls19-brand-gradient, linear-gradient(to right, #E61E4D 0%, #E31C5F 50%, #D70466 100%));
     color: rgb(255, 255, 255);
+}
+
+.check-availibility_btn:hover {
+    color: white !important;
+    text-decoration: none;
 }
 
 .other_social-login {

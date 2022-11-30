@@ -1633,7 +1633,7 @@ https://t-cf.bstatic.com/static/img/flags/new/48-squared/us/fa2b2a0e643c840152ba
                                         style="font-size: 12px;">22 reviews</a></span></span>
                         </div>
                         <div class="reserve-responsive_btn">
-                            <button class="check-availibility_btn px-3">Check Availibity</button>
+                            <a href="#card-pricing" class="check-availibility_btn px-3">Check Availibity</a>
                         </div>
                     </div>
                 </div>
@@ -1855,7 +1855,6 @@ https://t-cf.bstatic.com/static/img/flags/new/48-squared/us/fa2b2a0e643c840152ba
                             </path>
                         </svg><span>Save</span>
                     </button>
-
                     <!-- Modal -->
                     <div class="modal fade" id="save" tabindex="-1" aria-labelledby="exampleModalLabel"
                         aria-hidden="true">
@@ -2361,8 +2360,55 @@ https://t-cf.bstatic.com/static/img/flags/new/48-squared/us/fa2b2a0e643c840152ba
                                     </ul>
                                 </div>
                             </div>
-                            <div class="w-100">
+                            <div class="w-100" id="btn-check">
                                 <button class="check-availibility_btn">Check Availibity</button>
+                            </div>
+                            <div class="w-100" id="btn-reserve">
+                                <button class="check-availibility_btn">Reserve</button>
+                            </div>
+                            <div class="total-price">
+                                <p class="text-muted my-2">You won't be charged yet</p>
+                                <div class="d-flex justify-content-between">
+                                    <!-- Default dropstart button -->
+                                    <div class="btn-group dropstart">
+                                        <a type="button" class="text-dark dropdown-toggle" data-bs-toggle="dropdown"
+                                            aria-expanded="false">
+                                            $370
+                                            x
+                                            <span id="total_days" class="me-2"></span>night
+                                        </a>
+                                        <div class="dropdown-menu text-center px-3"
+                                            style="height: 200px; overflow-y:scroll;">
+                                            <p class="fw-bold">Base Price Breakdown</p>
+                                            <hr>
+                                            <span id="dates" style="font-size: 13px;"></span>
+                                            <hr>
+                                            <div class="d-flex">
+                                                <p class="fw-bold">Total base price</p>
+                                                <p class="fw-bold" id="total-base_price"></p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <p>$370</p>
+                                </div>
+                                <div class="d-flex justify-content-between">
+                                    <div class="btn-group dropstart">
+                                        <a type="button" class="text-dark dropdown-toggle" data-bs-toggle="dropdown"
+                                            aria-expanded="false">
+                                            Service Fee
+                                        </a>
+                                        <div class="dropdown-menu text-center">
+                                            This helps us run our platform and offer services like 24/7 support on your
+                                            trip. It includes VAT.
+                                        </div>
+                                    </div>
+                                    <p>$60</p>
+                                </div>
+                                <hr>
+                                <div class="d-flex justify-content-between">
+                                    <p class="fw-bold">Total before taxes</p>
+                                    <p class="fw-bold">$430</p>
+                                </div>
                             </div>
                         </div>
                     </div>
