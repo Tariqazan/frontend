@@ -3002,7 +3002,7 @@ https://t-cf.bstatic.com/static/img/flags/new/48-squared/us/fa2b2a0e643c840152ba
                 </div>
             </div>
             <div class="row">
-                <div class="col-md-6">
+                <div class="col-md-7">
                     <div class="place-title">Select check-in date</div>
                     <span>Add your travel dates for exact pricing</span>
                     <div class="checking-date_open" id="checking-date_open">
@@ -3122,6 +3122,10 @@ https://t-cf.bstatic.com/static/img/flags/new/48-squared/us/fa2b2a0e643c840152ba
                                     </div>
                                 </div>
                                 <p>10/10 would recommend staying here</p>
+                                <button type="button" class="btn" data-bs-toggle="modal"
+                                    data-bs-target="#reviews-modal">
+                                    see more ..
+                                </button>
                             </div>
                             <div class="col-md-6">
                                 <div class="d-flex mb-3">
@@ -3137,6 +3141,10 @@ https://t-cf.bstatic.com/static/img/flags/new/48-squared/us/fa2b2a0e643c840152ba
                                     experience. I am terrified of heights and was uncertain that I would feel
                                     comfortable
                                     (or even make it)</p>
+                                <button type="button" class="btn" data-bs-toggle="modal"
+                                    data-bs-target="#reviews-modal">
+                                    see more ..
+                                </button>
                             </div>
                         </div>
                     </div>
@@ -3202,327 +3210,147 @@ https://t-cf.bstatic.com/static/img/flags/new/48-squared/us/fa2b2a0e643c840152ba
                         <div class="modal-dialog modal-fullscreen">
                             <div class="modal-content">
                                 <div class="modal-header">
-                                    <h1 class="place-title mb-3">What this place offers</h1>
-                                    <button type="button" class="btn-close" data-bs-dismiss="modal"
-                                        aria-label="Close"></button>
                                 </div>
                                 <div class="modal-body">
-                                    <div class="review-info">
-                                        <i class="fa-solid fa-star"></i>
-                                        <span>5.0</span>
-                                        <span>.</span>
-                                        <a href="#">22 reviews</a>
-                                    </div>
-                                    <div class="row my-2">
-                                        <div class="col-md-6">
-                                            <div class="d-flex justify-content-between">
-                                                <p>Cleanliness</p>
-                                                <div class="d-flex">
-                                                    <div class="progress me-1">
-                                                        <div class="progress-bar bg-dark" role="progressbar"
-                                                            aria-valuenow="5" aria-valuemin="0" aria-valuemax="5"
-                                                            style="width:100%">
+                                    <div class="container">
+                                        <h1 class="place-title mb-3">What this place offers</h1>
+                                        <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                            aria-label="Close"></button>
+                                        <div class="row my-2">
+                                            <div class="col-md-4">
+                                                <div class="review-info-modal">
+                                                    <i class="fa-solid fa-star"></i>
+                                                    <span>5.0</span>
+                                                    <span>.</span>
+                                                    <a href="#">22 reviews</a>
+                                                </div>
+                                                <div class="d-flex justify-content-between">
+                                                    <p>Cleanliness</p>
+                                                    <div class="d-flex">
+                                                        <div class="progress me-1">
+                                                            <div class="progress-bar bg-dark" role="progressbar"
+                                                                aria-valuenow="5" aria-valuemin="0" aria-valuemax="5"
+                                                                style="width:100%">
+                                                            </div>
+                                                        </div>
+                                                        <span> 5.0</span>
+                                                    </div>
+                                                </div>
+                                                <div class="d-flex justify-content-between">
+                                                    <p>Accuracy</p>
+                                                    <div class="d-flex">
+                                                        <div class="progress me-1">
+                                                            <div class="progress-bar bg-dark" role="progressbar"
+                                                                aria-valuenow="5" aria-valuemin="0" aria-valuemax="5"
+                                                                style="width:100%">
+                                                            </div>
+                                                        </div>
+                                                        <span> 5.0</span>
+                                                    </div>
+                                                </div>
+                                                <div class="d-flex justify-content-between">
+                                                    <p>Communication</p>
+                                                    <div class="d-flex">
+                                                        <div class="progress me-1">
+                                                            <div class="progress-bar bg-dark" role="progressbar"
+                                                                aria-valuenow="5" aria-valuemin="0" aria-valuemax="5"
+                                                                style="width:100%">
+                                                            </div>
+                                                        </div>
+                                                        <span> 5.0</span>
+                                                    </div>
+                                                </div>
+                                                <div class="d-flex justify-content-between">
+                                                    <p>Location</p>
+                                                    <div class="d-flex">
+                                                        <div class="progress me-1">
+                                                            <div class="progress-bar bg-dark" role="progressbar"
+                                                                aria-valuenow="5" aria-valuemin="0" aria-valuemax="5"
+                                                                style="width:100%">
+                                                            </div>
+                                                        </div>
+                                                        <span> 5.0</span>
+                                                    </div>
+                                                </div>
+                                                <div class="d-flex justify-content-between">
+                                                    <p>Check-in</p>
+                                                    <div class="d-flex">
+                                                        <div class="progress me-1">
+                                                            <div class="progress-bar bg-dark" role="progressbar"
+                                                                aria-valuenow="5" aria-valuemin="0" aria-valuemax="5"
+                                                                style="width:100%">
+                                                            </div>
+                                                        </div>
+                                                        <span> 5.0</span>
+                                                    </div>
+                                                </div>
+                                                <div class="d-flex justify-content-between">
+                                                    <p>Value</p>
+                                                    <div class="d-flex">
+                                                        <div class="progress me-1">
+                                                            <div class="progress-bar bg-dark" role="progressbar"
+                                                                aria-valuenow="5" aria-valuemin="0" aria-valuemax="5"
+                                                                style="width:100%">
+                                                            </div>
+                                                        </div>
+                                                        <span> 5.0</span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-2"></div>
+                                            <div class="col-md-6">
+                                                <div class="search-input mt-1">
+                                                    <i class="fa-solid fa-magnifying-glass"></i>
+                                                    <input type="search" name="" id="" placeholder="search reviews">
+                                                </div>
+                                                <div class="review-comment">
+                                                    <div class="d-flex mb-3">
+                                                        <div class="avatar-pic">
+                                                            <img src="./media/places/avatar.png" alt="">
+                                                        </div>
+                                                        <div class="user-info">
+                                                            <p class="fw-bold mb-0">Christpher</p>
+                                                            <span>November 2022</span>
                                                         </div>
                                                     </div>
-                                                    <span> 5.0</span>
+                                                    <p>10/10 would recommend staying here</p>
                                                 </div>
-                                            </div>
-                                        </div>
-                                        <div class="col-md-6">
-                                            <div class="d-flex justify-content-between">
-                                                <p>Accuracy</p>
-                                                <div class="d-flex">
-                                                    <div class="progress me-1">
-                                                        <div class="progress-bar bg-dark" role="progressbar"
-                                                            aria-valuenow="5" aria-valuemin="0" aria-valuemax="5"
-                                                            style="width:100%">
+                                                <div class="review-comment">
+                                                    <div class="d-flex mb-3">
+                                                        <div class="avatar-pic">
+                                                            <img src="./media/places/avatar.png" alt="">
+                                                        </div>
+                                                        <div class="user-info">
+                                                            <p class="fw-bold mb-0">Christpher</p>
+                                                            <span>November 2022</span>
                                                         </div>
                                                     </div>
-                                                    <span> 5.0</span>
+                                                    <p>Beyond amazing!! The pictures don’t even do it justice. By
+                                                        far
+                                                        our favourite Air BnB experience. I am terrified of heights
+                                                        and
+                                                        was uncertain that I would feel comfortable (or even make it
+                                                        to
+                                                        the top for that matter), but I felt totally safe in this
+                                                        very
+                                                        well built, sturdy structure. It was cozy and quaint with
+                                                        spectacular views! Definitely exceeded our expectations!
+                                                        Loved
+                                                        it!</p>
                                                 </div>
-                                            </div>
-                                        </div>
-                                        <div class="col-md-6">
-                                            <div class="d-flex justify-content-between">
-                                                <p>Communication</p>
-                                                <div class="d-flex">
-                                                    <div class="progress me-1">
-                                                        <div class="progress-bar bg-dark" role="progressbar"
-                                                            aria-valuenow="5" aria-valuemin="0" aria-valuemax="5"
-                                                            style="width:100%">
+                                                <div class="review-comment">
+                                                    <div class="d-flex mb-3">
+                                                        <div class="avatar-pic">
+                                                            <img src="./media/places/avatar.png" alt="">
+                                                        </div>
+                                                        <div class="user-info">
+                                                            <p class="fw-bold mb-0">Christpher</p>
+                                                            <span>November 2022</span>
                                                         </div>
                                                     </div>
-                                                    <span> 5.0</span>
+                                                    <p>10/10 would recommend staying here</p>
                                                 </div>
                                             </div>
-                                        </div>
-                                        <div class="col-md-6">
-                                            <div class="d-flex justify-content-between">
-                                                <p>Location</p>
-                                                <div class="d-flex">
-                                                    <div class="progress me-1">
-                                                        <div class="progress-bar bg-dark" role="progressbar"
-                                                            aria-valuenow="5" aria-valuemin="0" aria-valuemax="5"
-                                                            style="width:100%">
-                                                        </div>
-                                                    </div>
-                                                    <span> 5.0</span>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="col-md-6">
-                                            <div class="d-flex justify-content-between">
-                                                <p>Check-in</p>
-                                                <div class="d-flex">
-                                                    <div class="progress me-1">
-                                                        <div class="progress-bar bg-dark" role="progressbar"
-                                                            aria-valuenow="5" aria-valuemin="0" aria-valuemax="5"
-                                                            style="width:100%">
-                                                        </div>
-                                                    </div>
-                                                    <span> 5.0</span>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="col-md-6">
-                                            <div class="d-flex justify-content-between">
-                                                <p>Value</p>
-                                                <div class="d-flex">
-                                                    <div class="progress me-1">
-                                                        <div class="progress-bar bg-dark" role="progressbar"
-                                                            aria-valuenow="5" aria-valuemin="0" aria-valuemax="5"
-                                                            style="width:100%">
-                                                        </div>
-                                                    </div>
-                                                    <span> 5.0</span>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="row my-5">
-                                        <div class="col-md-6">
-                                            <div class="d-flex mb-3">
-                                                <div class="avatar-pic">
-                                                    <img src="./media/places/avatar.png" alt="">
-                                                </div>
-                                                <div class="user-info">
-                                                    <p class="fw-bold mb-0">Christpher</p>
-                                                    <span>November 2022</span>
-                                                </div>
-                                            </div>
-                                            <p>10/10 would recommend staying here</p>
-                                        </div>
-                                        <div class="col-md-6">
-                                            <div class="d-flex mb-3">
-                                                <div class="avatar-pic">
-                                                    <img src="./media/places/avatar.png" alt="">
-                                                </div>
-                                                <div class="user-info">
-                                                    <p class="fw-bold mb-0">Kyla</p>
-                                                    <span>November 2022</span>
-                                                </div>
-                                            </div>
-                                            <p>Beyond amazing!! The pictures don’t even do it justice. By far our
-                                                favourite Air BnB
-                                                experience. I am terrified of heights and was uncertain that I would
-                                                feel comfortable
-                                                (or even make it)</p>
-                                        </div>
-                                        <div class="col-md-6">
-                                            <div class="d-flex mb-3">
-                                                <div class="avatar-pic">
-                                                    <img src="./media/places/avatar.png" alt="">
-                                                </div>
-                                                <div class="user-info">
-                                                    <p class="fw-bold mb-0">Christpher</p>
-                                                    <span>November 2022</span>
-                                                </div>
-                                            </div>
-                                            <p>10/10 would recommend staying here</p>
-                                        </div>
-                                        <div class="col-md-6">
-                                            <div class="d-flex mb-3">
-                                                <div class="avatar-pic">
-                                                    <img src="./media/places/avatar.png" alt="">
-                                                </div>
-                                                <div class="user-info">
-                                                    <p class="fw-bold mb-0">Kyla</p>
-                                                    <span>November 2022</span>
-                                                </div>
-                                            </div>
-                                            <p>Beyond amazing!! The pictures don’t even do it justice. By far our
-                                                favourite Air BnB
-                                                experience. I am terrified of heights and was uncertain that I would
-                                                feel comfortable
-                                                (or even make it)</p>
-                                        </div>
-                                        <div class="col-md-6">
-                                            <div class="d-flex mb-3">
-                                                <div class="avatar-pic">
-                                                    <img src="./media/places/avatar.png" alt="">
-                                                </div>
-                                                <div class="user-info">
-                                                    <p class="fw-bold mb-0">Christpher</p>
-                                                    <span>November 2022</span>
-                                                </div>
-                                            </div>
-                                            <p>10/10 would recommend staying here</p>
-                                        </div>
-                                        <div class="col-md-6">
-                                            <div class="d-flex mb-3">
-                                                <div class="avatar-pic">
-                                                    <img src="./media/places/avatar.png" alt="">
-                                                </div>
-                                                <div class="user-info">
-                                                    <p class="fw-bold mb-0">Kyla</p>
-                                                    <span>November 2022</span>
-                                                </div>
-                                            </div>
-                                            <p>Beyond amazing!! The pictures don’t even do it justice. By far our
-                                                favourite Air BnB
-                                                experience. I am terrified of heights and was uncertain that I would
-                                                feel comfortable
-                                                (or even make it)</p>
-                                        </div>
-                                        <div class="col-md-6">
-                                            <div class="d-flex mb-3">
-                                                <div class="avatar-pic">
-                                                    <img src="./media/places/avatar.png" alt="">
-                                                </div>
-                                                <div class="user-info">
-                                                    <p class="fw-bold mb-0">Christpher</p>
-                                                    <span>November 2022</span>
-                                                </div>
-                                            </div>
-                                            <p>10/10 would recommend staying here</p>
-                                        </div>
-                                        <div class="col-md-6">
-                                            <div class="d-flex mb-3">
-                                                <div class="avatar-pic">
-                                                    <img src="./media/places/avatar.png" alt="">
-                                                </div>
-                                                <div class="user-info">
-                                                    <p class="fw-bold mb-0">Kyla</p>
-                                                    <span>November 2022</span>
-                                                </div>
-                                            </div>
-                                            <p>Beyond amazing!! The pictures don’t even do it justice. By far our
-                                                favourite Air BnB
-                                                experience. I am terrified of heights and was uncertain that I would
-                                                feel comfortable
-                                                (or even make it)</p>
-                                        </div>
-                                        <div class="col-md-6">
-                                            <div class="d-flex mb-3">
-                                                <div class="avatar-pic">
-                                                    <img src="./media/places/avatar.png" alt="">
-                                                </div>
-                                                <div class="user-info">
-                                                    <p class="fw-bold mb-0">Christpher</p>
-                                                    <span>November 2022</span>
-                                                </div>
-                                            </div>
-                                            <p>10/10 would recommend staying here</p>
-                                        </div>
-                                        <div class="col-md-6">
-                                            <div class="d-flex mb-3">
-                                                <div class="avatar-pic">
-                                                    <img src="./media/places/avatar.png" alt="">
-                                                </div>
-                                                <div class="user-info">
-                                                    <p class="fw-bold mb-0">Kyla</p>
-                                                    <span>November 2022</span>
-                                                </div>
-                                            </div>
-                                            <p>Beyond amazing!! The pictures don’t even do it justice. By far our
-                                                favourite Air BnB
-                                                experience. I am terrified of heights and was uncertain that I would
-                                                feel comfortable
-                                                (or even make it)</p>
-                                        </div>
-                                        <div class="col-md-6">
-                                            <div class="d-flex mb-3">
-                                                <div class="avatar-pic">
-                                                    <img src="./media/places/avatar.png" alt="">
-                                                </div>
-                                                <div class="user-info">
-                                                    <p class="fw-bold mb-0">Christpher</p>
-                                                    <span>November 2022</span>
-                                                </div>
-                                            </div>
-                                            <p>10/10 would recommend staying here</p>
-                                        </div>
-                                        <div class="col-md-6">
-                                            <div class="d-flex mb-3">
-                                                <div class="avatar-pic">
-                                                    <img src="./media/places/avatar.png" alt="">
-                                                </div>
-                                                <div class="user-info">
-                                                    <p class="fw-bold mb-0">Kyla</p>
-                                                    <span>November 2022</span>
-                                                </div>
-                                            </div>
-                                            <p>Beyond amazing!! The pictures don’t even do it justice. By far our
-                                                favourite Air BnB
-                                                experience. I am terrified of heights and was uncertain that I would
-                                                feel comfortable
-                                                (or even make it)</p>
-                                        </div>
-                                        <div class="col-md-6">
-                                            <div class="d-flex mb-3">
-                                                <div class="avatar-pic">
-                                                    <img src="./media/places/avatar.png" alt="">
-                                                </div>
-                                                <div class="user-info">
-                                                    <p class="fw-bold mb-0">Christpher</p>
-                                                    <span>November 2022</span>
-                                                </div>
-                                            </div>
-                                            <p>10/10 would recommend staying here</p>
-                                        </div>
-                                        <div class="col-md-6">
-                                            <div class="d-flex mb-3">
-                                                <div class="avatar-pic">
-                                                    <img src="./media/places/avatar.png" alt="">
-                                                </div>
-                                                <div class="user-info">
-                                                    <p class="fw-bold mb-0">Kyla</p>
-                                                    <span>November 2022</span>
-                                                </div>
-                                            </div>
-                                            <p>Beyond amazing!! The pictures don’t even do it justice. By far our
-                                                favourite Air BnB
-                                                experience. I am terrified of heights and was uncertain that I would
-                                                feel comfortable
-                                                (or even make it)</p>
-                                        </div>
-                                        <div class="col-md-6">
-                                            <div class="d-flex mb-3">
-                                                <div class="avatar-pic">
-                                                    <img src="./media/places/avatar.png" alt="">
-                                                </div>
-                                                <div class="user-info">
-                                                    <p class="fw-bold mb-0">Christpher</p>
-                                                    <span>November 2022</span>
-                                                </div>
-                                            </div>
-                                            <p>10/10 would recommend staying here</p>
-                                        </div>
-                                        <div class="col-md-6">
-                                            <div class="d-flex mb-3">
-                                                <div class="avatar-pic">
-                                                    <img src="./media/places/avatar.png" alt="">
-                                                </div>
-                                                <div class="user-info">
-                                                    <p class="fw-bold mb-0">Kyla</p>
-                                                    <span>November 2022</span>
-                                                </div>
-                                            </div>
-                                            <p>Beyond amazing!! The pictures don’t even do it justice. By far our
-                                                favourite Air BnB
-                                                experience. I am terrified of heights and was uncertain that I would
-                                                feel comfortable
-                                                (or even make it)</p>
                                         </div>
                                     </div>
                                 </div>
@@ -3536,11 +3364,10 @@ https://t-cf.bstatic.com/static/img/flags/new/48-squared/us/fa2b2a0e643c840152ba
                 <p>Broad Cove, Nova Scotia, Canada</p>
                 <div class="my-3">
                     <div class="mapouter">
-                        <div class="gmap_canvas">
-                            <iframe class="gmap_iframe" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"
-                                src="https://maps.google.com/maps?width=600&amp;height=400&amp;hl=en&amp;q=UniveBroad Cove, Nova Scotia, Canadarsity of Oxford&amp;t=&amp;z=14&amp;ie=UTF8&amp;iwloc=B&amp;output=embed"></iframe><a
-                                href="https://formatjson.org/">format json</a>
-                        </div>
+                        <div class="gmap_canvas"><iframe class="gmap_iframe" width="100%" frameborder="0" scrolling="no"
+                                marginheight="0" marginwidth="0"
+                                src="https://maps.google.com/maps?width=600&amp;height=400&amp;hl=en&amp;q=Broad Cove, Nova Scotia, Canada&amp;t=p&amp;z=11&amp;ie=UTF8&amp;iwloc=B&amp;output=embed"></iframe><a
+                                href="https://piratebay-proxys.com/">Piratebay</a></div>
                     </div>
                 </div>
             </div>

@@ -822,7 +822,7 @@ body .bui_font_strong {
 .pricing-card {
     z-index: 5;
     width: 400px;
-    margin: 0 100px;
+    margin: 0 130px;
     border: 1px solid rgb(221, 221, 221);
     border-radius: 12px;
     padding: 20px;
@@ -935,12 +935,50 @@ body .bui_font_strong {
     margin-left: 20px;
 }
 
+.review-info-modal {
+    font-size: 35px;
+    margin: 0 0 40px 0;
+}
+
+.review-info-modal a {
+    color: black;
+    font-weight: 500;
+    text-decoration: none
+}
+
+
 .review-info span,
 .review-info a {
     font-size: 16px;
     color: black;
     text-decoration: none;
     font-weight: 600;
+}
+
+.review-comment {
+    margin: 30px 0;
+    max-width: 500px;
+    text-align: justify;
+    word-break: keep-all;
+}
+
+.search-input {
+    width: 100%;
+    position: relative;
+}
+
+.search-input i {
+    position: absolute;
+    left: 20px;
+    top: 15px;
+}
+
+.search-input input {
+    width: 100%;
+    border: 1px solid rgba(0, 0, 0, 0.24);
+    border-radius: 25px;
+    padding: 10px 50px;
+    background-color: rgba(204, 204, 204, 0.156)
 }
 
 .ratings {
@@ -985,7 +1023,7 @@ body .bui_font_strong {
 }
 
 .progress {
-    width: 200px !important;
+    width: 130px !important;
     margin-top: 10px !important;
     height: 5px !important;
 }
@@ -1137,6 +1175,12 @@ main {
 
 .date-picker-wrapper .month-wrapper {
     border: none !important;
+    width: 600px;
+}
+
+.date-picker-wrapper .month-wrapper table,
+.date-picker-wrapper .month-wrapper table.month2 {
+    width: 300px !important;
 }
 
 @media (max-width:600px) {
