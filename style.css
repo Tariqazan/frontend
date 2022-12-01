@@ -966,7 +966,9 @@ body .bui_font_strong {
     font-weight: 500;
     text-decoration: none
 }
-
+.review-info-modal a:hover{
+    color: black !important;
+}
 
 .review-info span,
 .review-info a {
