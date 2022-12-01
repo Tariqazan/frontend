@@ -828,6 +828,12 @@ body .bui_font_strong {
     box-shadow: rgb(0 0 0 / 12%) 0px 6px 16px;
 }
 
+@media (min-width:1400px) {
+    .pricing-card {
+        margin: 0 100px;
+    }
+}
+
 .date-picker-wrapper .month-wrapper table td,
 .date-picker-wrapper .month-wrapper table th {
     height: 50px;
