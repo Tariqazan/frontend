@@ -783,11 +783,6 @@ body .bui_font_strong {
     border-top: 1px solid rgb(221, 221, 221);
 }
 
-@media (min-width:1400px) {
-    .sticky {
-        right: 450px;
-    }
-}
 
 @media (max-width:600px) {
     .fixed-card {
@@ -816,6 +811,7 @@ body .bui_font_strong {
 .sticky {
     position: fixed;
     top: 120px;
+    bottom: 100px;
     right: inherit;
 }
 
@@ -840,7 +836,7 @@ body .bui_font_strong {
 
 .date-picker-wrapper .month-wrapper table td:hover,
 .date-picker-wrapper .month-wrapper table th:hover {
-    box-shadow: 0 0 10px gainsboro;
+    box-shadow: 0 0 4px gainsboro;
 }
 
 .price {
@@ -962,7 +958,8 @@ body .bui_font_strong {
     font-weight: 500;
     text-decoration: none
 }
-.review-info-modal a:hover{
+
+.review-info-modal a:hover {
     color: black !important;
 }
 
@@ -1194,7 +1191,7 @@ main {
 
 .date-picker-wrapper .month-wrapper {
     border: none !important;
-    width: 600px;
+    width: 340px;
 }
 
 .date-picker-wrapper .month-wrapper table,

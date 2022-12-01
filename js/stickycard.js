@@ -1,7 +1,7 @@
 $(function () {
     $(window).scroll(function () {
         if ($(window).scrollTop() > $(".place-details-point").offset().top + $(".place-details-point").height() -250 &&
-            $(window).scrollTop() <= $(".checking-date_open").offset().top + $(".checking-date_open").height() - 300) {
+            $(window).scrollTop() <= $(".checking-date_open").offset().top + $(".checking-date_open").height() - 350) {
             $("#card-pricing").addClass("sticky");
         } else {
             $("#card-pricing").removeClass("sticky");
