@@ -18,7 +18,7 @@ $('#checking-date_close').dateRangePicker({
     format: 'MM-DD-YYYY',
     container: '#datepicker_calender',
     alwaysOpen: false,
-    singleMonth: false,
+    singleMonth: true,
     showTopbar: true,
     setValue: function (s) {
 

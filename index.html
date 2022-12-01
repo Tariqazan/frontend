@@ -2320,64 +2320,66 @@ https://t-cf.bstatic.com/static/img/flags/new/48-squared/us/fa2b2a0e643c840152ba
                             <div id='datepicker_calender' class="date-picker"></div>
                             <div class="guests">
                                 <div class="dropdown">
-                                    <button class="btn dropdown-toggle py-2" type="button" data-bs-toggle="dropdown"
-                                        aria-expanded="false">
-                                        Guests
+                                    <button type="button" class="btn dropdown-toggle py-2" data-bs-toggle="dropdown"
+                                        aria-expanded="false" data-bs-auto-close="outside">
+                                        Guest <span id="numbers_of_guest"></span>
                                     </button>
-                                    <ul class="dropdown-menu">
-                                        <li>
+                                    <div class="dropdown-menu">
+                                        <div>
                                             <div class="dropdown-item-text d-flex justify-content-between">
                                                 <div class="guest-info">
                                                     <p class="fw-bold mb-0">Adults</p>
                                                     <span>Age 13+</span>
                                                 </div>
                                                 <div class="number_of-guest">
-                                                    <span class="me-2">+</span>
-                                                    <span id="guest-number">0</span>
-                                                    <span class="ms-2">-</span>
+                                                    <span class="me-2" onclick="guest_number_increase('adult')">+</span>
+                                                    <p id="guest-adult">0</p>
+                                                    <span class="ms-2" onclick="guest_number_decrease('adult')">-</span>
                                                 </div>
                                             </div>
-                                        </li>
-                                        <li>
+                                        </div>
+                                        <div>
                                             <div class="dropdown-item-text d-flex justify-content-between">
                                                 <div class="guest-info">
                                                     <p class="fw-bold mb-0">Children</p>
                                                     <span>under 2-12</span>
                                                 </div>
                                                 <div class="number_of-guest">
-                                                    <span class="me-2">+</span>
-                                                    <span id="guest-number">0</span>
-                                                    <span class="ms-2">-</span>
+                                                    <span class="me-2" onclick="guest_number_increase('child')">+</span>
+                                                    <p id="guest-child">0</p>
+                                                    <span class="ms-2" onclick="guest_number_decrease('child')">-</span>
                                                 </div>
                                             </div>
-                                        </li>
-                                        <li>
+                                        </div>
+                                        <div>
                                             <div class="dropdown-item-text d-flex justify-content-between">
                                                 <div class="guest-info">
                                                     <p class="fw-bold mb-0">Infants</p>
                                                     <span>under 2</span>
                                                 </div>
                                                 <div class="number_of-guest">
-                                                    <span class="me-2">+</span>
-                                                    <span id="guest-number">0</span>
-                                                    <span class="ms-2">-</span>
+                                                    <span class="me-2"
+                                                        onclick="guest_number_increase('infant')">+</span>
+                                                    <p id="guest-infant">0</p>
+                                                    <span class="ms-2"
+                                                        onclick="guest_number_decrease('infant')">-</span>
                                                 </div>
                                             </div>
-                                        </li>
-                                        <li>
+                                        </div>
+                                        <div>
                                             <div class="dropdown-item-text d-flex justify-content-between">
                                                 <div class="guest-info">
                                                     <p class="fw-bold mb-0">pets</p>
                                                     <a href="#" class="text-dark">Bringing a service animal?</a>
                                                 </div>
                                                 <div class="number_of-guest">
-                                                    <span class="me-2">+</span>
-                                                    <span id="guest-number">0</span>
-                                                    <span class="ms-2">-</span>
+                                                    <span class="me-2" onclick="guest_number_increase('pet')">+</span>
+                                                    <p id="guest-pet">0</p>
+                                                    <span class="ms-2" onclick="guest_number_decrease('pet')">-</span>
                                                 </div>
                                             </div>
-                                        </li>
-                                    </ul>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
                             <div class="w-100" id="btn-check">
@@ -2389,8 +2391,8 @@ https://t-cf.bstatic.com/static/img/flags/new/48-squared/us/fa2b2a0e643c840152ba
                             <div class="total-price">
                                 <p class="text-muted my-2">You won't be charged yet</p>
                                 <div class="d-flex justify-content-between">
-                                    <!-- Default dropstart button -->
-                                    <div class="btn-group dropstart">
+                                    <!-- Default dropend button -->
+                                    <div class="btn-group dropend">
                                         <a type="button" class="text-dark dropdown-toggle" data-bs-toggle="dropdown"
                                             aria-expanded="false">
                                             $370
@@ -2412,7 +2414,7 @@ https://t-cf.bstatic.com/static/img/flags/new/48-squared/us/fa2b2a0e643c840152ba
                                     <p>$370</p>
                                 </div>
                                 <div class="d-flex justify-content-between">
-                                    <div class="btn-group dropstart">
+                                    <div class="btn-group dropend">
                                         <a type="button" class="text-dark dropdown-toggle" data-bs-toggle="dropdown"
                                             aria-expanded="false">
                                             Service Fee
@@ -4043,6 +4045,7 @@ https://t-cf.bstatic.com/static/img/flags/new/48-squared/us/fa2b2a0e643c840152ba
         </div>
     </footer>
     <script src="static/js/bootstrap.min.js"></script>
+    <script src="js/main.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"
         integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3"
         crossorigin="anonymous"></script>

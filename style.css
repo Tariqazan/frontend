@@ -832,7 +832,15 @@ body .bui_font_strong {
 
 .date-picker-wrapper .month-wrapper table td,
 .date-picker-wrapper .month-wrapper table th {
-    height: 50px;
+    height: 45px;
+    width: 45px;
+    border-radius: 50%;
+    text-align: center;
+}
+
+.date-picker-wrapper .month-wrapper table td:hover,
+.date-picker-wrapper .month-wrapper table th:hover {
+    box-shadow: 0 0 10px gainsboro;
 }
 
 .price {
@@ -871,6 +879,10 @@ body .bui_font_strong {
     font-size: 12px;
 }
 
+#checking-date_close {
+    max-width: 300px !important;
+}
+
 .dropdown-menu {
     width: 300px;
 }
@@ -879,9 +891,18 @@ body .bui_font_strong {
     display: flex;
 }
 
+.number_of-guest p {
+    padding: 0 10px;
+}
+
 .number_of-guest span {
-    padding: 10px;
+    padding-left: 7px;
     height: 20px;
+    cursor: pointer;
+    border: 1px solid #ccc;
+    height: 25px;
+    width: 25px;
+    border-radius: 50%;
 }
 
 
