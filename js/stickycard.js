@@ -2,9 +2,9 @@ $(function () {
     $(window).scroll(function () {
         if ($(window).scrollTop() > $(".place-details-point").offset().top + $(".place-details-point").height() -250 &&
             $(window).scrollTop() <= $(".checking-date_open").offset().top + $(".checking-date_open").height() - 300) {
-            $(".pricing-card").addClass("sticky");
+            $("#card-pricing").addClass("sticky");
         } else {
-            $(".pricing-card").removeClass("sticky");
+            $("#card-pricing").removeClass("sticky");
         }
     });
 

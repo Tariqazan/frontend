@@ -777,16 +777,6 @@ body .bui_font_strong {
     font-weight: 300;
 }
 
-.fixed-card {
-    position: relative;
-}
-
-.sticky {
-    position: fixed;
-    top: 120px;
-}
-
-
 .responsive-pricing {
     display: none;
     background-color: rgb(255, 255, 255);
@@ -818,10 +808,21 @@ body .bui_font_strong {
     z-index: -22222222222222222222222222222 !important;
 }
 
+.fixed-card {
+    position: relative;
+    max-width: 400px;
+}
+
+.sticky {
+    position: fixed;
+    top: 120px;
+    right: inherit;
+}
+
 .pricing-card {
     z-index: 5;
     width: 400px;
-    margin: 0 50px;
+    margin: 0 100px;
     border: 1px solid rgb(221, 221, 221);
     border-radius: 12px;
     padding: 20px;
